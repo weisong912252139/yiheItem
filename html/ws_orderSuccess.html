@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>shoppingCart</title>
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/ws_public1.css">
+    <link rel="stylesheet" href="../css/shoppingCart.css">
+    <link href="http://cdn.bootcss.com/sweetalert/1.1.3/sweetalert.min.css" rel="stylesheet">
+    <!--<link rel="stylesheet" href="../css/font-awesome.min.css">-->
+  </head>
+  <body>
+
+    <header>
+      <div class="nav-top-wrapper">
+        <div class="nav-top-inner">
+          <div class="left_city pull-left">
+						<span>所在城市:</span>
+            <a href="ws_toggleCity.html">
+              <span id="ws_city">北京</span>
+  						<img src="../img/home_page/down.png"/>
+            </a>
+					</div>
+          <ul class="list-unstyled list-inline  pull-right">
+            <li>你好: <a id="personal" href="rj_personal.html"></a></li>
+            <li><a href="ws_logIn.html">退出</a></li>
+            <li>|</li>
+            <li><a href="rj_myunpaid.html">我的订单</a></li>
+            <li>|</li>
+            <li><a href="rj_personal.html">我的消息</a></li>
+            <li>|</li>
+            <li><a href="ws_sellerLogIn.html">我是商家</a></li>
+            <li>|</li>
+            <li>400-100-0907</li>
+          </ul>
+        </div>
+
+      </div>
+
+
+    </header>
+
+     <section>
+       <div class="shoppingCart">
+         <div class="cart_header clearfix">
+           <div class="pull-left">
+             <a href="yf_index.html">
+               <img src="../img/y-Life.png" alt="">
+             </a>
+           </div>
+           <div class="pull-right">
+             <div id="crumbs">
+            	<ul class="list-inline">
+            		<li><a href="javascript:;">我的购物车</a></li>
+            		<li><a href="javascript:;">确认订单信息</a></li>
+            		<li><a href="javascript:;" class="active">提交订单成功</a></li>
+
+            	</ul>
+            </div>
+           </div>
+         </div>
+
+
+         <!--orderSuccess-->
+         <div class="orderSuccess">
+           <div class="successInfo">
+             <div class="successIcon">
+               <span class="glyphicon glyphicon-ok-circle"></span>
+             </div>
+             <p class="successDescription">
+               订单已提交,请于24小时内完成支付 <span>( 逾期订单将被取消 )</span>
+             </p>
+           </div>
+           <div class="successOrder">
+             <p class="successAddress">
+               <span class="glyphicon glyphicon-map-marker"></span>
+               <a></a>
+             </p>
+             <p class="successMoney">
+               应付金额: <span class="successPrice">¥ </span> <span>( 在线支付 )</span> <span class="pull-right successNumber">订单编号 13112813457</span>
+             </p>
+           </div>
+
+           <div class="cart_title">
+             <span class="cart_name">支付平台</span>
+           </div>
+
+           <div class="radio">
+             <label>
+               <input type="radio" name="payOne" checked><img src="../img/public/ws_zhifubao.png" alt="">
+             </label>
+             <label>
+               <input type="radio" name="payOne"><img src="../img/public/weixinzhifu.png" alt="">
+             </label>
+             <label>
+               <input type="radio" name="payOne"><img src="../img/public/yinlian.png" alt="">
+             </label>
+             <label>
+               <input type="radio" name="payOne"><img src="../img/public/yue.png" alt="">
+             </label>
+           </div>
+
+           <!--computerOr iPhone-->
+           <div class="payWhich">
+             <div class="whichContent">
+               <div class="flexItem">
+                 <p>使用支付宝支付</p>
+                 <div>
+                   <img src="../img/public/ws_computer.jpg" alt="">
+                 </div>
+                 <span class="ImmediatePayment">立即支付</span>
+               </div>
+               <div class="or">
+                 或
+               </div>
+               <div>
+                 <p>使用支付宝钱包扫一扫付款</p>
+                 <div>
+                   <img src="../img/public/ws_Alipay.jpg" alt="">
+                 </div>
+               </div>
+             </div>
+           </div>
+
+           <div class="payWhich">
+             <div class="whichContent">
+               <div class="flexItem">
+                 <div>
+                   <img src="../img/public/ws_phone.jpg" alt="">
+                 </div>
+               </div>
+               <div class="or">
+                 或
+               </div>
+               <div>
+                 <p>使用微信扫一扫付款</p>
+                 <div>
+                   <img src="../img/public/ws_wx.png" alt="">
+                 </div>
+               </div>
+             </div>
+           </div>
+
+
+
+
+         </div>
+
+
+
+
+       </div>
+
+
+
+     </section>
+
+
+
+
+     <iframe src="rj_public_bottom.html" frameborder="0" scrolling="no" width="100%" height="477px"></iframe>
+
+
+
+
+
+     <script src="../js/jquery.min.js" charset="utf-8"></script>
+     <script src="../js/bootstrap.min.js"></script>
+     <script src="http://cdn.bootcss.com/sweetalert/1.1.3/sweetalert.min.js"></script>
+     <script src="../js/ws_orderSuccess.js" type="text/javascript" charset="utf-8"></script>
+  </body>
+</html>

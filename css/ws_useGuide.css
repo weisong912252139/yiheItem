@@ -1,0 +1,132 @@
+
+
+section{
+  width: 100%;
+  min-width: 1180px;
+  height: 710px;
+  background: url('../img/ws_yindaochengshi.png') no-repeat;
+  background-size: 100% 100%;
+  border-bottom: 1px solid black;
+}
+section .content-wrapper{
+  width: 1180px;
+  height: 710px;
+  margin: 0 auto;
+}
+section .content{
+  position: relative;
+  left: 0;
+  right: 0;
+  top: 300px;
+  margin: auto;
+  /* background: lime; */
+  width: 720px;
+}
+section .content .selectPart{
+  width: 510px;
+  height: 56px;
+  background: #fff;
+}
+section .content .selectPart input{
+  border: none;
+  outline: none;
+  border-right: 1px solid rgb(201,201,201);
+  width: 370px;
+  height: 36px;
+  margin-top: 10px;
+  padding-left: 20px;
+  padding-right: 10px;
+  font-size: 20px;
+  font-weight: 300;
+}
+section .content .selectPart span{
+  display: inline-block;
+  text-align: center;
+  width: 125px;
+  font-size: 26px;
+  font-weight: 200;
+}
+section .content .content-top a{
+  display: inline-block;
+  width: 170px;
+  height: 56px;
+  background: rgb(229,84,20);
+  border-radius: 6px;
+  text-align: center;
+  line-height: 56px;
+  font-size: 24px;
+  color: #fff;
+  font-weight: 100;
+}
+
+section .content-bottom{
+  height: 300px;
+  margin-top: 18px;
+  overflow: auto;
+  border: 1px solid rgb(201,201,201);
+  background: #fff;
+  padding:0 10px;
+  overflow-x: hidden;
+  position: relative;
+  transition: all 100s;
+}
+
+section .content-bottom p{
+  /* background: red; */
+  height: 60px;
+  line-height: 60px;
+  border-bottom: 1px solid rgb(201,201,201);
+  font-size: 20px;
+  font-weight: 200;
+  margin-bottom: 0;
+  background: #fff;
+  position: relative;
+  z-index: 10;
+}
+section .content-bottom p span{
+  border: 1px solid red;
+  padding: 4px 8px;
+  font-size: 16px;
+  color: rgb(235,131,91);
+}
+section .content-bottom .cityList{
+  position: relative;
+  left: 0;
+  top: 0;
+}
+section .content-bottom .cityList>li{
+  border-bottom: 1px solid rgb(201,201,201);
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+section .content-bottom .cityList>li .flag{
+  float: left;
+  width: 42px;
+  height: 22px;
+  background: rgb(234,234,234);
+  text-align: center;
+  line-height: 22px;
+  margin-right: 20px;
+}
+section .content-bottom .cityList>li .listItem li{
+  cursor: pointer;
+}
+footer{
+  width: 100%;
+  min-width: 1180px;
+}
+footer .bottom-wrapper{
+  width: 1180px;
+  height: 125px;
+  margin: 0 auto;
+}
+footer .bottom-inner{
+  padding-top: 40px;
+}
+footer .bottom-wrapper p{
+  color: rgb(144,135,135);
+}
+footer .bottom-wrapper .bottom{
+  color: red;
+}

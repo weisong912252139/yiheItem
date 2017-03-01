@@ -1,0 +1,222 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>商品详情</title>
+		<link rel="stylesheet" type="text/css" href="../css/yf_product.css" />
+		<link rel="stylesheet" type="text/css" href="../css/yf_product_assess.css" />
+		<link rel="stylesheet" type="text/css" href="../css/bootstrap.css"/>
+		<link href="http://cdn.bootcss.com/sweetalert/1.1.3/sweetalert.min.css" rel="stylesheet">
+		<script src="http://cdn.bootcss.com/sweetalert/1.1.3/sweetalert.min.js"></script>
+
+	</head>
+
+	<body>
+		<section>
+			<div class="yf_way">
+				<p>您当前的位置：
+					<a href="yf_index.html"><span>首页</span></a> >
+					<a href="yf_hailanzhijia.html"><span id="ws_shopName">海澜之家</span></a> >
+					<a href="yf_product.html"><span>男衬衫</span></a>
+				</p>
+			</div>
+
+			<div class="yf_information">
+				<div class="shangjia_xinxi">
+					<div class="yf_communication">
+						<!--放大镜-->
+						<div class="preview">
+							<div id="vertical" class="bigImg">
+								<img src="" width="400" height="400" alt="" id="midimg" />
+								<div style="display:none;" id="winSelector"></div>
+							</div>
+							<!--bigImg end-->
+							<div class="smallImg">
+								<div class="scrollbutton smallImgUp disabled"></div>
+								<div id="imageMenu">
+									<ul>
+										<li id="onlickImg"><img src="" width="68" height="68" alt="洋妞" /></li>
+										<li><img src="" width="68" height="68" alt="洋妞" /></li>
+										<li><img src="" width="68" height="68" alt="洋妞" /></li>
+										<li><img src="" width="68" height="68" alt="洋妞" /></li>
+										<li><img src="" width="68" height="68" alt="洋妞" /></li>
+										<li><img src="" width="68" height="68" alt="洋妞" /></li>
+										<li><img src="" width="68" height="68" alt="洋妞" /></li>
+										<li><img src="" width="68" height="68" alt="洋妞" /></li>
+									</ul>
+								</div>
+								<div class="scrollbutton smallImgDown"></div>
+							</div>
+							<!--smallImg end-->
+							<div id="bigView" style="display:none;"><img width="800" height="800" alt="" src="" /></div>
+						</div>
+						<!--preview end-->
+					</div>
+					<!--商品信息-->
+					<div class="yf_center_xinxi">
+						<h1 id="ws_desc">男士短衬衫</h1>
+						<p class="goods_text">男人的衣柜海澜之家男人的衣柜海澜之家男人的衣柜海澜之家男人的衣柜海澜之家男人的衣柜海澜之家</p>
+						<div class="yf_type" id="ws_type">
+							<p class="ws_size">尺码：
+								<span class="active">170</span><span>175</span><span>180</span>
+							</p>
+							<p class="ws_color">颜色：
+								<span class="active">红</span><span>绿</span><span>蓝</span>
+							</p>
+						</div>
+						<div class="yf_jiage">
+							<em>现价：￥<span id="ws_itemPrice">20</span></em>
+							<s>原价：<span id="yf_goods_OriginalPrice">100.00</span></s>
+							<span>已有381人购买了这件商品</span>
+							<div class="yf_counts">
+								<p>数量：
+									<span class="yf_jian">-</span>
+									<input type="text" value="1" id='ws_shopNum' disabled="disabled" />
+									<span class="yf_jia">+</span></p>
+								<input class="join_shopping_car" type="button" value="加入购物车" id="ws_addShoppingCart" data-toggle="modal" data-target=".addShopping"/>
+
+								<input class="immediately_buy" id="ws_newShop" type="button" value="立即购买" />
+							</div>
+
+						</div>
+						<div class="collect_share">
+							<div class="yf_collect">
+								<a href="javascript:;"><span class="glyphicon glyphicon-star-empty show" aria-hidden="true"></span></a>
+								<a href="javascript:;"><span class="glyphicon glyphicon-star" aria-hidden="true" style="color: orangered;"></span></a>
+							</div>
+								<span>收藏此商品</span>
+							<div class="yf_share">
+								<p>分享到：</p>
+								<a href="javascript:;"><img src="../img/hailanzhijia/share1.png" /></a>
+								<a href="javascript:;"><img src="../img/hailanzhijia/share2.png" /></a>
+								<a href="javascript:;"><img src="../img/hailanzhijia/share3.png" /></a>
+								<a href="javascript:;"><img src="../img/hailanzhijia/share4.png" /></a>
+								<a href="javascript:;"><img src="../img/hailanzhijia/share5.png" /></a>
+							</div>
+						</div>
+					</div>
+					<div class="click_join">
+						<a href="javascript:;">
+							<p>点击加入商家</p>
+						</a>
+						<a href="javascript:;"><img src="../img/Q1.png" /></a>
+						<a href="javascript:;"><img src="../img/Q2.png" /></a>
+					</div>
+				</div>
+			</div>
+
+			<!--商品详情，商品评价，成交记录-->
+
+			<ul class="yf_sorts">
+				<li class="pitch">商品详情</li>
+				<li>商品评价</li>
+				<li>成交记录</li>
+			</ul>
+			<ul class="goods_sorts">
+				<!--商品详情-->
+				<li class="goods_details show">
+					<div class="yf_goods">
+						<h2>男士短衬衫</h2>
+						<p>明水礼盒十分优秀，是送朋友，送亲人的不二选择。</p>
+						<p>什么，您还不知道明水礼盒，今年过年不收礼，收礼只收明水礼盒，OUT了吧，赶紧买起礼盒送亲朋，送好友吧。</p>
+						<p>完成交易，如有剩余库存，从新上架产品</p>
+						<img src="../img/shangpin.png" />
+					</div>
+					<div class="yf_goods">
+						<h2>男士短衬衫</h2>
+						<p>明水礼盒十分优秀，是送朋友，送亲人的不二选择。</p>
+						<p>什么，您还不知道明水礼盒，今年过年不收礼，收礼只收明水礼盒，OUT了吧，赶紧买起礼盒送亲朋，送好友吧。</p>
+						<p>完成交易，如有剩余库存，从新上架产品</p>
+						<img src="../img/shangpin.png" />
+					</div>
+					<div class="yf_goods">
+						<h2>男士短衬衫</h2>
+						<p>明水礼盒十分优秀，是送朋友，送亲人的不二选择。</p>
+						<p>什么，您还不知道明水礼盒，今年过年不收礼，收礼只收明水礼盒，OUT了吧，赶紧买起礼盒送亲朋，送好友吧。</p>
+						<p>完成交易，如有剩余库存，从新上架产品</p>
+						<img src="../img/shangpin.png" />
+					</div>
+					<div class="yf_goods">
+						<h2>男士短衬衫</h2>
+						<p>明水礼盒十分优秀，是送朋友，送亲人的不二选择。</p>
+						<p>什么，您还不知道明水礼盒，今年过年不收礼，收礼只收明水礼盒，OUT了吧，赶紧买起礼盒送亲朋，送好友吧。</p>
+						<p>完成交易，如有剩余库存，从新上架产品</p>
+						<img src="../img/shangpin.png" />
+					</div>
+				</li>
+				<!--商品评价-->
+				<li class="goods_assess">
+					<ul id="yf_list">
+						<!--<li>
+							<div class="head_portrait">
+								<img src="../img/product/mis.zhang.png" />
+								<p class="userName">张XX</p>
+							</div>
+							<div class="assesses">
+								<div>
+									<span class="timer">2017-2-21</span>
+									<div class="grade">
+										<img src="../img/product/hongxing.png" />
+										<img src="../img/product/heixing.png" />
+										<img src="../img/product/heixing.png" />
+										<img src="../img/product/heixing.png" />
+										<img src="../img/product/heixing.png" />
+									</div>
+								</div>
+								<p>很好吃，昨天收到就弄了一些吃，刚刚有弄了点直接凉拌吃，一个都没坏，卖家人也很热情，货也实惠，买的五斤发六斤，吃完还买哈很好吃，昨天收到就弄了一些吃，刚刚有弄了点直接凉拌吃，一个都没坏，卖家人也很热情，货也实惠，买的五斤发六斤，吃完还买哈</p>
+								<div class="inset">
+									<img src="../img/product/mis.xioazhang.png" />
+									<img src="../img/product/mis.xioazhang.png" />
+									<img src="../img/product/mis.xioazhang.png" />
+									<img src="../img/product/mis.xioazhang.png" />
+								</div>
+							</div>
+						</li>-->
+					</ul>
+				</li>
+				<!--成交记录-->
+				<li class="transaction_record">
+					<table class="table table-hover">
+  						<tr class="head_title">
+  							<td>买家</td>
+  							<td>价格</td>
+  							<td>数量</td>
+  							<td>付款时间</td>
+  						</tr>
+  						<tr>
+  							<td>张XX</td>
+  							<td>￥<span>666.00</span></td>
+  							<td>6</td>
+  							<td>2017-2-21 11:33:22</td>
+  						</tr>
+  						<tr>
+  							<td>张XX</td>
+  							<td>￥<span>666.00</span></td>
+  							<td>6</td>
+  							<td>2017-2-21 11:33:22</td>
+  						</tr>
+  						<tr>
+  							<td>张XX</td>
+  							<td>￥<span>666.00</span></td>
+  							<td>6</td>
+  							<td>2017-2-21 11:33:22</td>
+  						</tr>
+  						<tr>
+  							<td>张XX</td>
+  							<td>￥<span>666.00</span></td>
+  							<td>6</td>
+  							<td>2017-2-21 11:33:22</td>
+  						</tr>
+					</table>
+				</li>
+			</ul>
+		</section>
+		<div id="footer"></div>
+	</body>
+
+	<script src="../js/zoom.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/yf_product.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/ws_product.js" charset="utf-8"></script>
+	<!--<script src="../js/yf_product2.js" type="text/javascript" charset="utf-8"></script>-->
+</html>

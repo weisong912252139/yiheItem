@@ -1,0 +1,521 @@
+ul {
+	list-style: none;
+	margin-bottom: 0 !important;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	width: 100%;
+	min-width: 1180px;
+}
+
+a {
+	text-decoration: none !important;
+}
+
+.points-content {
+	width: 1180px;
+	margin: 0 auto;
+}
+
+.points {
+	background-color: #f2f2f2;
+	width: 100%;
+	padding-bottom: 40px;
+	overflow: hidden;
+	padding-top: 20px;
+}
+
+.points-left {
+	width: 173px;
+	border: 1px solid #d3d3d3;
+	background-color: #ffffff;
+	padding-bottom: 10px;
+	float: left;
+}
+
+.points-left>p {
+	padding-top: 5px;
+	padding-left: 20px;
+}
+
+.points-left ul {
+	width: 120px;
+	margin-top: -8px;
+}
+
+.points-left ul li {
+	margin-left: 20px;
+	margin-top: 12px;
+	display: inline-block;
+}
+
+.points-left ul li a {
+	color: #666666;
+}
+
+.points-left ul li a:hover {
+	color: #ed7122
+}
+
+.points-left ul li:hover {
+	color: #ff6c00;
+}
+
+.points-left>p {
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.points-left p i {
+	padding-left: 60px;
+}
+
+.points-left>h3 {
+	border-bottom: 1px solid #d3d3d3;
+	height: 40px;
+	padding-left: 20px;
+	color: #666666;
+	font-size: 20px;
+}
+
+.points-left h3 span {
+	color: #ff6c00;
+	padding-right: 7px;
+}
+
+.fonts1>a {
+	color: #ff6c00 !important;
+}
+
+.points-right {
+	float: left;
+	margin-left: 20px;
+	width: 985px;
+	height: 490px;
+	background-color: #ffffff;
+	border: 1px solid #d3d3d3;
+}
+
+.place-font {
+	background-color: #ffffff;
+	margin: 0 auto;
+	margin-top: 0;
+	overflow: hidden;
+}
+
+.heads>h3 {
+	color: #008de1;
+	padding-left: 20px;
+	padding-bottom: 2px;
+}
+
+.heads {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	border-bottom: 1px solid #d3d3d3;
+}
+
+.refer1 {
+	width: 90px;
+	height: 30px;
+	margin-top: 15px;
+	margin-right: 20px;
+	outline: none !important;
+	background-color: #ec6a17 !important;
+}
+
+.refer1:hover {
+	background-color: #ec6a17 !important;
+}
+
+.succeed p {
+	margin-top: 165px;
+	margin-left: 255px;
+	font-size: 18px;
+	color: #a0a0a0;
+}
+
+.succeed p span a,
+.succeed p i {
+	font-size: 22px;
+	color: #ec6a17;
+}
+
+.succeed p span a:hover {
+	text-decoration: none;
+}
+
+.person-left {
+	float: left;
+	color: #414141;
+	width: 160px;
+}
+
+.person-left ul li:nth-child(1) {
+	margin-top: 45px;
+	margin-left: 40px;
+	line-height: 36px;
+	font-size: 18px;
+}
+
+.person-left ul li:nth-child(2),
+.person-left ul li:nth-child(3),
+.person-left ul li:nth-child(4),
+.person-left ul li:nth-child(5) {
+	margin-left: 52px;
+	line-height: 46px;
+	font-size: 18px;
+	margin-top: 20px;
+}
+
+.person-left ul li span {
+	color: #ec6a17;
+}
+
+.person-right {
+	float: left;
+}
+
+.person-right ul {
+	margin-top: 40px;
+}
+
+.person-right ul li span {
+	margin-left: 10px;
+	color: #229ce5;
+}
+
+.person-right ul li:nth-child(1) input {
+	margin-top: 8px;
+	width: 320px;
+	height: 35px;
+	color: black;
+	padding-left: 10px;
+}
+
+.person-right ul li:nth-child(2) {
+	margin-top: 20px;
+}
+
+.person-right ul li select {
+	width: 140px;
+	height: 35px;
+	background-color: white;
+	outline: none;
+	color: black;
+	border-radius: 0px !important;
+	padding: 0;
+	padding-left: 10px;
+	-webkit-appearance: none;
+	margin-right: 20px;
+	background: url("../img/public/rjkkkkk.png")no-repeat scroll right center transparent;
+	padding-right: 15px;
+}
+
+.person-right ul li select::-ms-expand {
+	display: none;
+}
+
+.person-right ul li:nth-child(3) input {
+	margin-top: 35px;
+	width: 320px;
+	height: 35px;
+	color: black;
+}
+
+.person-right ul li:nth-child(4) {
+	margin-top: 30px;
+	color: black;
+}
+
+.person-right ul li:nth-child(4) span {
+	color: black;
+}
+
+.person-right ul li:nth-child(5) {
+	margin-top: 30px;
+	color: black;
+}
+
+.person-right ul li input {
+	outline: none;
+	padding-left: 10px;
+}
+
+.inputs1 {
+	width: 150px;
+	height: 35px;
+}
+
+.inputs2 {
+	width: 47px;
+	height: 35px;
+}
+
+.inputs3 {
+	width: 125px;
+	height: 35px;
+}
+
+.refer {
+	margin-top: 35px;
+	width: 170px;
+	height: 45px;
+	outline: none !important;
+	background-color: #ec6a17 !important;
+}
+
+.refer:hover {
+	background-color: #ec6a17 !important;
+}
+
+.content-address {
+	width: 945px;
+	margin: 0 auto;
+	margin-top: 20px;
+}
+
+.content-address ul {
+	background-color: #eaeaea;
+	height: 40px;
+}
+
+.content-address ul li {
+	display: inline-block;
+	line-height: 40px;
+	color: #666666;
+	font-size: 16px;
+}
+
+.content-address ul li:nth-child(1) {
+	padding-left: 12px;
+}
+
+.content-address ul li:nth-child(2) {
+	padding-left: 20px;
+}
+
+.content-address ul li:nth-child(3) {
+	padding-left: 40px;
+}
+
+.content-address ul li:nth-child(4) {
+	padding-left: 130px;
+}
+
+.content-address ul li:nth-child(5) {
+	padding-left: 140px;
+}
+
+.content-address ul li:nth-child(6) {
+	padding-left: 50px;
+}
+
+.content-address ul li:nth-child(7) {
+	padding-left: 130px;
+}
+
+.content-three {
+	height: 355px;
+	overflow: auto;
+}
+
+.content-address1 {
+	width: 945px;
+	margin: 0 auto;
+}
+
+.content-address1 ul {
+	height: 35px;
+	border-bottom: 1px solid #d3d3d3;
+}
+
+.content-address1 ul:hover {
+	background-color: #fff3ec;
+}
+
+.content-address1 ul li {
+	display: inline-block;
+	line-height: 35px;
+	color: #666666;
+	font-size: 12px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.content-address1 ul li:nth-child(1) {
+	width: 50px;
+	text-align: center;
+}
+
+.content-address1 ul li:nth-child(2) {
+	width: 70px;
+	text-align: center;
+}
+
+.content-address1 ul li:nth-child(3) {
+	width: 220px;
+	text-align: left;
+}
+
+.content-address1 ul li:nth-child(4) {
+	width: 210px;
+}
+
+.content-address1 ul li:nth-child(5) {
+	width: 80px;
+}
+
+.content-address1 ul li:nth-child(6) {
+	width: 120px;
+	text-align: center;
+}
+
+.content-address1 ul li:nth-child(7) {
+	width: 160px;
+	text-align: center;
+}
+
+.add1 a {
+	color: #ec6a17;
+	text-decoration: none;
+}
+
+.add2 a {
+	color: #008de1;
+	text-decoration: none;
+}
+
+.add3 a {
+	color: #008de1;
+	text-decoration: none;
+}
+
+.add1 a:hover {
+	color: #ec6a17;
+}
+
+.add2 a:hover,
+.add3 a:hover {
+	color: #008de1;
+}
+
+.address1 {
+	display: none;
+}
+
+.address2 {
+	display: none;
+}
+
+.address3 {
+	display: none;
+}
+
+
+/* 修改地址模态框的样式修改 */
+
+.titleAlert {
+	color: rgb(73, 148, 225);
+	padding-left: 20px;
+}
+
+.modal-dialog form label {
+	font-size: 18px;
+	color: rgb(38, 38, 38);
+	font-weight: 200;
+}
+
+.modal-dialog form .addA {
+	padding-left: 10px;
+	box-sizing: border-box;
+	margin-left: 18px;
+	height: 34px;
+	border: 1px solid rgb(201, 201, 201);
+	outline: none;
+	width: 120px;
+	border-radius: 5px;
+}
+
+.modal-dialog .modal-footer {
+	border: none;
+	width: 50%;
+	margin: 0 auto;
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.modal-dialog .modal-footer .button {
+	width: 90px;
+	height: 40px;
+	text-align: center;
+	line-height: 40px;
+	display: inline-block;
+	color: #fff;
+	font-weight: 200;
+	font-size: 16px;
+	border-radius: 5px;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.modal-dialog .modal-footer .gray {
+	background: rgb(135, 135, 135);
+	margin-right: 10px;
+}
+
+.modal-dialog .modal-footer .orange {
+	background: rgb(229, 84, 20);
+}
+
+.modal-dialog .close {
+	font-size: 50px;
+	position: absolute;
+	right: 20px;
+	top: -2px;
+}
+
+.modal-dialog .close:focus {
+	outline: none;
+}
+
+.modal-dialog select {
+	width: 80px !important;
+	height: 35px;
+	border: 1px solid rgb(201, 201, 201);
+	margin-left: 10px;
+	outline: none;
+}
+
+.myrefer {
+	margin-top: 32px;
+	margin-left: 50px;
+	background-color: lightgray !important;
+	border-color: lightgray !important;
+	width: 170px;
+	height: 45px;
+	outline: none !important;
+}
+
+
+/*城市输入框处理*/
+
+.item i {
+	background-color: white !important;
+}
+
+#province,
+#citys,
+#county {
+	background-color: white!important;
+}

@@ -1,0 +1,440 @@
+ul {
+	list-style: none;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	width: 100%;
+	min-width: 1180px;
+}
+a:hover{
+	text-decoration: none !important;
+	color: #008de1 !important;
+}
+.refer,.refer1{
+	outline: none !important;
+}
+
+.personal-content {
+	width: 1180px;
+	margin: 0 auto;
+	position: relative;
+}
+
+.personal {
+	background-color: #f2f2f2;
+	width: 100%;
+	padding-bottom: 40px;
+	overflow: hidden;
+	padding-top: 20px;
+}
+
+.personal-left {
+	width: 173px;
+	border: 1px solid #d3d3d3;
+	background-color: #ffffff;
+	padding-bottom: 10px;
+	float: left;
+}
+
+.personal-left>p {
+	padding-top: 5px;
+	padding-left: 20px;
+}
+
+.personal-left ul {
+	width: 120px;
+	margin-top: -8px;
+}
+
+.personal-left ul li {
+	margin-left: 20px;
+	margin-top: 12px;
+	display: inline-block;
+}
+
+.personal-left ul li a {
+	color: #666666;
+}
+
+.personal-left ul li a:hover {
+	color: #ed7122
+}
+
+.personal-left ul li:hover {
+	color: #ff6c00;
+}
+
+.personal-left>p {
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.personal-left p i {
+	padding-left: 60px;
+}
+
+.personal-left>h3 {
+	border-bottom: 1px solid #d3d3d3;
+	height: 40px;
+	padding-left: 20px;
+	color: #666666;
+	font-size: 20px;
+}
+
+.personal-left h3 span {
+	color: #ff6c00;
+	padding-right: 7px;
+}
+
+.fonts1>a {
+	color: #ff6c00 !important;
+}
+
+.personal-right {
+	float: left;
+	margin-left: 20px;
+	width: 985px;
+	height: 520px;
+	background-color: #ffffff;
+	border: 1px solid #d3d3d3;
+}
+
+.place-font {
+	background-color: #ffffff;
+	margin: 0 auto;
+	margin-top: 0;
+	border-bottom: 1px solid #d3d3d3;
+	padding-bottom: 5px;
+}
+
+.place-font>h3 {
+	padding-left: 20px;
+	color: #229ce5;
+	font-size: 20px;
+}
+
+.person {
+	overflow: hidden;
+}
+
+.person-left {
+	float: left;
+	color: #414141;
+	width: 125px;
+}
+
+.person-left ul li:nth-child(1) {
+	margin-top: 45px;
+	margin-left: 40px;
+	line-height: 36px;
+	font-size: 18px;
+
+}
+
+
+.person-left ul li:nth-child(2),
+.person-left ul li:nth-child(3),
+.person-left ul li:nth-child(4),
+.person-left ul li:nth-child(5) {
+	margin-left: 75px;
+	line-height: 46px;
+	font-size: 18px;
+}
+.person-left ul li:nth-child(4) {
+margin-top:10px;
+}
+.person-left ul li:nth-child(5) {
+margin-top:15px;
+}
+
+.person-left ul li:nth-child(2) {
+	margin-top: 20px;
+}
+
+.person-right {
+	margin-top: 40px;
+	margin-left: 10px;
+	float: left;
+	color: #414141;
+	position: relative;
+}
+
+.person-right ul li span {
+	margin-left: 10px;
+	color: #229ce5;
+}
+.person-right ul li:nth-child(1) input{
+	position: absolute;
+	top: 10px;
+	left: 60px;
+	width: 20px;
+	height: 20px;
+	opacity: 0;
+}
+
+.person-right ul li:nth-child(2) {
+	margin-top: 20px;
+	width: 120px;
+	height: 30px;
+	background-color: #e2e2e2;
+	line-height: 30px;
+	padding-left: 10px;
+}
+
+.person-right ul li:nth-child(3) {
+	margin-top: 18px;
+}
+
+.person-right ul li:nth-child(4) {
+	margin-top: 25px;
+	font-size: 16px;
+	-webkit-appearance: none;
+}
+.person-right ul li:nth-child(4) select {
+	width: 110px;
+	height: 35px;
+	background-color: white;
+
+}
+
+
+.person-right ul li:nth-child(5) {
+	margin-top: 30px;
+	width: 120px;
+	height: 30px;
+	background-color: #e2e2e2;
+	line-height: 30px;
+	padding-left: 10px;
+}
+.person-right ul li:nth-child(5) span{
+	background-color: white;
+}
+.person-right p{
+	position: absolute;
+	top: 230px;
+	left: 130px;
+	
+	color: #008de1;
+}
+.person-right p span{
+	cursor: pointer;
+}
+
+
+
+.person-right ul li input {
+	outline: none ;
+	
+}
+
+.gril {
+	margin-left: 20px !important;
+}
+.input1,.input2{
+	height: 35px;	
+}
+
+.refer {
+	margin-top: 40px;
+	margin-left: 135px;
+	background-color: #ec6a17 !important;
+	width: 170px;
+	height: 45px;
+}
+
+.refer1 {
+	margin-top: 40px;
+	margin-left: 42px;
+	background-color: #ec6a17 !important;
+	width: 170px;
+	height: 45px;
+}
+
+
+.personal-right{
+	/*display: none;*/
+}
+
+.right1{
+	position: absolute;
+	top: 0;
+	left: 200px;
+	width: 985px;
+	height: 520px;
+	background-color: #ffffff;
+	border: 1px solid #d3d3d3;
+	display: none;
+
+}
+.right2{
+	position: absolute;
+	top: 0;
+	left: 200px;
+	width: 985px;
+	height: 520px;
+	background-color: #ffffff;
+	border: 1px solid #d3d3d3;
+	display: none;
+
+}
+.right3{
+	position: absolute;
+	top: 0;
+	left: 200px;
+	width: 985px;
+	height: 520px;
+	background-color: #ffffff;
+	border: 1px solid #d3d3d3;
+	display: none;
+	
+}
+
+.changes{
+	margin-left: 10px;
+	color: #ec6a17;
+	cursor: pointer;
+}
+
+/* 购物车头部的面包屑效果 */
+#crumbs{
+  margin-top: 40px;
+  margin-left: 40px;
+}
+#crumbs ul{
+  margin: 0;
+}
+
+#crumbs ul li a {
+	display: block;
+	float: left;
+	background: rgb(223,223,223);
+	text-align: center;
+	padding: 10px 75px 10px 60px;
+	position: relative;
+	margin: 0 -5px 0 0;
+    font-weight: 200;
+	font-size: 16px;
+	text-decoration: none;
+	color: rgb(38,38,38);
+}
+#crumbs ul li:first-child a{
+  padding-left: 30px;
+}
+#crumbs ul li a.active{
+  background: rgb(229,84,20);
+  color: #fff;
+}
+#crumbs ul li a.active:after{
+  border-left: 20px solid rgb(229,84,20);
+}
+
+ #crumbs ul li a:after {
+  content: "";
+  border-top: 29px solid red;
+  border-bottom: 29px solid red;
+  border-left: 20px solid blue;
+  position: absolute;
+  right: -20px;
+  top: 0;
+  z-index: 3;
+  border-top: 21px solid transparent;
+  border-bottom: 21px solid transparent;
+  border-left: 20px solid rgb(223,223,223);
+}
+
+
+
+#crumbs ul li a:before {
+  content: "";
+  border-top: 21px solid transparent;
+  border-bottom: 21px solid transparent;
+  border-left: 20px solid #fff;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 2;
+
+}
+
+
+#crumbs ul li:first-child a:before {
+  display: none;
+}
+
+
+#crumbs ul li:last-child a:after {
+  display: none;
+}
+
+.phone ul{
+	margin-top: 20px;
+}
+
+.phone ul li {
+	margin-left: 40px;
+	margin-top: 20px;
+	padding-left: 10px;
+	outline: none;
+}
+
+.phone ul li:nth-child(1) input{
+	width: 310px;
+	height: 42px;
+	padding-left: 10px;
+	outline: none;
+}
+.phone ul li:nth-child(2) input{
+	width: 110px;
+	height: 42px;
+	padding-left: 10px;
+	outline: none;
+}
+.phone ul li:nth-child(3) input{
+	width: 310px;
+	height: 42px;
+	padding-left: 10px;
+	outline: none;
+}
+.phone p{
+	position: relative;
+	
+}
+.post{
+	position: absolute;
+	top: 294px;
+	left: 245px;
+}
+.post button{
+	height: 32px;
+	width: 100px;
+	background-color: #008de1;
+	color: white;
+	border: none;
+}
+
+.succeed p{
+	margin-top: 165px;
+	margin-left: 255px;
+	font-size: 24px;
+	color: #ec6a17;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

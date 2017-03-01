@@ -1,0 +1,51 @@
+/* 这个是 引导页  登录页面 和注册页面  的头部  的公共的  css样式 单独提出 */
+
+body{
+  width: 100%;
+  min-width: 1180px;
+}
+ul{
+  margin: 0;
+  padding: 0;
+}
+a{
+  text-decoration: none;
+  color: black;
+}
+
+header{
+  width: 100%;
+  min-width: 1180px;
+}
+header .nav-top-wrapper{
+  width: 100%;
+  min-width: 1180px;
+  background: rgb(234,234,234);
+}
+header .nav-top-inner{
+  width: 1180px;
+  height: 34px;
+  line-height: 34px;
+  margin: 0 auto;
+}
+
+header .nav-middle{
+  width: 1180px;
+  margin: 0 auto;
+  height: 130px;
+  line-height: 130px;
+}
+header .nav-middle .colLine{
+  float: left;
+  background: rgb(201,201,201);
+  height: 80px;
+  line-height: 130px;
+  margin: 25px 50px ;
+  width: 1px;
+}
+
+header .nav-middle ul li{
+  font-size: 22px;
+  font-weight: 200;
+  color: rgb(83,83,83);
+}

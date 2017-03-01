@@ -1,0 +1,237 @@
+ul {
+	list-style: none;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	width: 100%;
+	min-width: 1180px;
+	
+}
+
+.points-content {
+	width: 1180px;
+	margin: 0 auto;
+}
+
+.points {
+	background-color: #f2f2f2;
+	width: 100%;
+	padding-bottom: 40px;
+	overflow: hidden;
+	padding-top: 20px;
+}
+
+
+.points-left {
+	width: 173px;
+	border: 1px solid #d3d3d3;
+	background-color: #ffffff;
+	padding-bottom: 10px;
+	float: left;
+}
+
+.points-left>p {
+	padding-top: 5px;
+	padding-left: 20px;
+}
+.points-left ul{
+		width: 120px;
+		margin-top: -8px;
+
+}
+.points-left ul li {
+	margin-left: 20px;
+	margin-top: 12px;
+	
+	
+	display: inline-block;
+}
+.points-left ul li a{
+	color: #666666;
+}
+
+.points-left ul li a:hover{
+	color: #ed7122
+}
+.points-left ul li:hover{
+	color: #ff6c00;
+}
+.points-left>p {
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.points-left p i {
+	padding-left: 60px;
+}
+
+.points-left>h3 {
+	border-bottom: 1px solid #d3d3d3;
+	height: 40px;
+	padding-left: 20px;
+	color: #666666;
+	font-size: 20px;
+}
+
+.points-left h3 span {
+	color: #ff6c00;
+	padding-right: 7px;
+}
+
+.fonts1>a {
+	color: #ff6c00 !important;
+}
+.points-right{
+	float: left;
+	margin-left: 20px;
+	/*color: red;*/
+}
+.place-font {
+	width: 985px;
+	background-color: #ffffff;
+	margin: 0 auto;
+	margin-top: 0;
+	border: 1px solid #d3d3d3;
+	padding-bottom: 30px;
+}
+
+.recharge{
+	float: left;
+	margin-left: 20px;
+	width: 980px;
+	
+	
+}
+
+.recharge-head{
+	border: 1px solid #d3d3d3;
+	background-color: #ffffff;
+}
+
+
+
+.recharge-first{
+	height: 57px;
+	width: 100%;
+	
+	margin-top:0 ;
+	border-bottom: 1px solid #d3d3d3;
+}
+
+.recharge-first>p,.recharge-details>p{
+	line-height: 57px;
+	font-size: 18px;
+	color: #008de1;
+	margin-left: 20px;
+}
+.recharge-second ul li{
+	margin-left: 20px;
+	margin-top: 40px;
+	font-size: 18px;
+}
+
+.recharge-second ul li span{
+	color: #ec6a17;
+}
+
+.recharge-second ul li input{
+	width: 170px;
+	height: 35px;
+	margin-left: 15px;
+	padding-left: 10px;
+}
+
+.butt{
+	width: 170px;
+	height: 45px;
+	background-color: #ec6a17  !important;
+	margin-left: 115px;
+	margin-top: 40px;
+	margin-bottom: 40px !important;
+	outline: none !important;
+}
+
+.recharge-boot{
+	margin-top: 20px;
+	border: 1px solid #d3d3d3;
+	background-color: #ffffff;
+}
+
+
+.recharge-details{
+	margin-top: 20px;
+	height: 57px;
+	width: 100%;
+	border-bottom: 1px solid #d3d3d3;
+	
+
+}
+
+.detail ul {
+	display: flex;
+	
+justify-content: space-between;
+margin-left: 20px;
+margin-right: 20px;
+line-height: 55px;
+border-bottom: 1px solid #d3d3d3;
+
+	font-size: 18px;
+
+}
+
+.detail ul li:nth-child(1){
+	padding-left: 60px;
+	
+	
+}
+.detail ul li:nth-child(4){
+	padding-right: 20px;
+	
+	
+}
+.detail1 ul {
+	display: flex;
+	
+justify-content: space-between;
+margin-left: 20px;
+margin-right: 20px;
+line-height: 55px;
+border-bottom: 1px dashed #d3d3d3;
+
+	
+
+}
+.detail1 ul li{
+	width: 140px;
+	/*background-color: red;*/
+	
+}
+
+
+.detail1 ul li:nth-child(2),.detail1 ul li:nth-child(3){
+	text-align: center;
+	color: #ec6a17;
+	
+}
+
+.detail1 ul li:nth-child(4){
+	padding-right: 20px;
+	text-align: right;
+}
+
+#demo{
+
+text-align: center;
+
+}
+
+
+
+
+

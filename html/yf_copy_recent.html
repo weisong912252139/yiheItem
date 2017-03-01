@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>我的收藏</title>
+		<link rel="stylesheet" type="text/css" href="../css/bootstrap.css" />
+		<link rel="stylesheet" type="text/css" href="../css/swiper.min.css" />
+		<link rel="stylesheet" type="text/css" href="../css/font-awesome.min.css" />
+		<link rel="stylesheet" type="text/css" href="../css/yf_my_collect.css" />
+	</head>
+
+	<div id="header"></div>
+
+	<body id="body">
+		<section>
+
+			<div class="points">
+				<div class="points-content">
+					<div class="points-left">
+						<p class="center"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>个人中心</p>
+						<p>交易管理<i class="fa fa-angle-right" aria-hidden="true"></i></p>
+						<ul>
+							<li class="fonts1">
+								<a href="rj_myaccount.html">我的账户</a>
+							</li>
+							<li>
+								<a href="rj_myunpaid.html">我的订单</a>
+							</li>
+							<li>
+								<a href="rj_mypoint.html">我的积分</a>
+							</li>
+							<li>
+								<a href="rj_mycoupons.html">我的易和券</a>
+							</li>
+						</ul>
+						<p>会员资料<i class="fa fa-angle-right" aria-hidden="true"></i></p>
+						<ul>
+
+							<li>
+								<a href="rj_personal.html">个人资料</a>
+							</li>
+							<li>
+								<a href="rj_address.html">地址管理</a>
+							</li>
+							<li>
+								<a href="yf_my_collect.html">我的收藏</a>
+							</li>
+							<li class="my_collect">
+								<a href="yf_copy_recent.html">最近浏览</a>
+							</li>
+							<li>
+								<a href="rj_rpassward.html">修改密码</a>
+							</li>
+						</ul>
+						<p>站内信<i class="fa fa-angle-right" aria-hidden="true"></i></p>
+						<ul>
+
+							<li>
+								<a href="rj_mynews.html">我的消息</a>
+							</li>
+
+						</ul>
+
+					</div>
+
+				</div>
+			</div>
+
+			<div class="yf_right">
+				<div class="my_shoucang">
+					<p>最近浏览</p>
+				</div>
+				<div class="integral_mall">
+					<a href="javascript:;">
+						<div class="shows">
+							<div class="shop_list">
+								<div class="car_sort" v-for='item in shopList'>
+									<div class="sorts_img">
+										<img v-bind:src='item.urlimg' />
+									</div>
+									<div class="yf_info">
+										<p>送礼送健康，快来看啊，快来买啊，走过路过的朋友不要错过，买一送一，过年送家人送朋友</p>
+										<div class="jiage">
+											<span class="current_price">￥<span>500.00</span></span>
+											<s class="Original_price">￥<span>2000.0</span></s>
+										</div>
+										<p class="convertBtn" data-toggle="modal" data-target="#myModal">收藏</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</a>
+				</div>
+			</div>
+
+		</section>
+		<!--分页器-->
+
+		<div class="yf_fenye">
+			<div class="yf_pagination">
+				<p class="yf_first">首页</p>
+				<div class="tiaozhuan">
+					<p>上一页</p>
+					<p class="onpuss">1</p>
+					<p class="onpuss">2</p>
+					<p class="onpuss">3</p>
+					<p class="onpuss">4</p>
+					<p class="onpuss">5</p>
+
+					<p>下一页</p>
+				</div>
+				<p class="yf_last">尾页</p>
+				<div class="jump_to">
+					共<span>10</span>页，到第<input type="text" />页
+				</div>
+				<button class="btn">确认</button>共20条
+			</div>
+		</div>
+		<div id="footer"></div>
+	</body>
+	<script src="../js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/vue.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/yf_my_collect.js" type="text/javascript" charset="utf-8"></script>
+
+</html>

@@ -1,0 +1,28 @@
+/* 注册页面中单独的样式书写 */
+
+/* 头部的padding */
+section .log_wrap .log_form{
+  padding-top: 40px;
+}
+
+
+/*  */
+.red{
+  background: rgb(229,84,20);
+}
+.blue{
+  background: rgb(34,120,218);
+}
+
+.log_phoneCheckNum{
+  display: block;
+  margin-top: 30px;
+
+}
+
+
+
+/* 去掉多余的下border */
+.log_form .log_btn{
+  border:none;
+}

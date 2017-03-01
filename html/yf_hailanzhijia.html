@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>海澜之家</title>
+		<link rel="stylesheet" type="text/css" href="../css/bootstrap.css" />
+		<link rel="stylesheet" type="text/css" href="../css/magnifier.css" />
+		<link rel="stylesheet" type="text/css" href="../css/yf_hailanzhijia.css" />
+	</head>
+
+	<body>
+		<div id="header"></div>
+		<section>
+			<div class="yf_way">
+				<p>您当前的位置：
+					<a href="yf_index.html"><span>首页</span></a> >
+					<a href="yf_hailanzhijia.html"><span>海澜之家</span></a>
+				</p>
+			</div>
+			<div class="shangjia_xinxi">
+				<div class="yf_communication">
+					<!--放大镜-->
+					<div class="preview">
+						<div id="vertical" class="bigImg">
+							<img src="../mid/01.png" width="400" height="400" alt="" id="midimg" />
+							<div style="display:none;" id="winSelector"></div>
+						</div>
+						<!--bigImg end-->
+						<div class="smallImg">
+							<div class="scrollbutton smallImgUp disabled"></div>
+							<div id="imageMenu">
+								<ul>
+									<li id="onlickImg"><img src="../small/01.png" width="68" height="68" alt="洋妞" /></li>
+									<li><img src="../small/01.png" width="68" height="68" alt="洋妞" /></li>
+									<li><img src="../small/02.png" width="68" height="68" alt="洋妞" /></li>
+									<li><img src="../small/03.png" width="68" height="68" alt="洋妞" /></li>
+									<li><img src="../small/04.png" width="68" height="68" alt="洋妞" /></li>
+									<li><img src="../small/05.png" width="68" height="68" alt="洋妞" /></li>
+									<li><img src="../small/06.png" width="68" height="68" alt="洋妞" /></li>
+									<li><img src="../small/07.png" width="68" height="68" alt="洋妞" /></li>
+								</ul>
+							</div>
+							<div class="scrollbutton smallImgDown"></div>
+						</div>
+						<!--smallImg end-->
+						<div id="bigView" style="display:none;"><img width="800" height="800" alt="" src="" /></div>
+					</div>
+					<!--preview end-->
+				</div>
+
+			<div class="yf_center_xinxi">
+				<h2>海澜之家旗舰店</h2>
+				<p>男人的衣柜海澜之家男人的衣柜海澜之家男人的衣柜海澜之家男人的衣柜海澜之家男人的衣柜海澜之家</p>
+				<div class="yf_info">
+					<p>
+						<span class="glyphicon glyphicon-user" aria-hidden="true"></span> 魏松</p>
+					<p><span class="glyphicon glyphicon-phone" aria-hidden="true"></span> 1636666666</p>
+					<p><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span> 浙江省台州市温岭市人民西路281号</p>
+				</div>
+				<p>商家公告：</p>
+				<span>
+						男人的衣柜海澜之家男人的衣柜海澜之家男人的衣柜海澜之家男人的衣柜海澜之家男人的衣柜海澜之家
+					</span>
+			</div>
+			<div class="yf_right_pingjia">
+				<img src="../img/hailanzhijia/Business_information.png" />
+				<p>
+					<p>客服一：
+						<a href="javascript:;"><img src="../img/hailanzhijia/kefu1.png" /></a>
+					</p>
+					<p>客服二：
+						<a href="javascript:;"><img src="../img/hailanzhijia/kefu2.png" /></a>
+					</p>
+				</p>
+			</div>
+			</div>
+			<div class="centers">
+				<ul class="yf_nav_tabs">
+					<li role="presentation" class="active">
+						<a href="javascript:;">男上衣</a>
+					</li>
+					<li role="presentation">
+						<a href="javascript:;">女上衣</a>
+					</li>
+					<li role="presentation">
+						<a href="javascript:;">男裤</a>
+					</li>
+					<li role="presentation">
+						<a href="javascript:;">女裤</a>
+					</li>
+					<li role="presentation">
+						<a href="javascript:;">男衬衫</a>
+					</li>
+					<li role="presentation">
+						<a href="javascript:;">女衬衫</a>
+					</li>
+					<li role="presentation">
+						<a href="javascript:;">到店的商品</a>
+					</li>
+					<li role="presentation">
+						<a href="javascript:;">男内衣</a>
+					</li>
+					<li role="presentation">
+						<a href="javascript:;">女内衣</a>
+					</li>
+					<li role="presentation">
+						<a href="javascript:;">袜子</a>
+					</li>
+					<li role="presentation">
+						<a href="javascript:;">全部商品</a>
+					</li>
+				</ul>
+				<!-- <a href="yf_product.html"> -->
+					<div class="shows1">
+						<div class="shop_list1">
+							<div class="car_sort" v-for='item in shopList'>
+								<div class="sorts_img" v-on:click='goShop(item)'>
+									<img v-bind:src='item.urlimg'  />
+								</div>
+								<div class="yf_info2">
+									<p>送礼送健康，快来看啊，快来买啊，走过路过的朋友不要错过，买一送一，过年送家人送朋友</p>
+									<span class="current_price">￥<span>998.00</span></span>
+									<s class="Original_price">￥<span>2000.0</span></s>
+								</div>
+							</div>
+						</div>
+					</div>
+				<!-- </a> -->
+			</div>
+			<div class="yf_pagination">
+				<p class="yf_first">首页</p>
+				<div class="tiaozhuan">
+					<p>上一页</p>
+					<p class="onpuss">1</p>
+					<p class="onpuss">2</p>
+					<p class="onpuss">3</p>
+					<p class="onpuss">4</p>
+					<p class="onpuss">5</p>
+					<p class="onpuss">6</p>
+					<p class="onpuss">7</p>
+					<p class="onpuss">8</p>
+					<p class="onpuss">9</p>
+					<p class="onpuss">10</p>
+					<p>下一页</p>
+				</div>
+				<p class="yf_last">尾页</p>
+				<div class="jump_to">
+					共<span>10</span>页，到第<input type="text" />页
+				</div>
+				<button class="btn">确认</button>共20条
+			</div>
+		</section>
+		<!--<iframe src="rj_public_bottom.html" width="100%" height="477px" frameborder='0' scrolling="no"></iframe>-->
+		<div id="footer"></div>
+	</body>
+	<script src="../js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	<!--<script src="../js/jquery-migrate-1.1.0.min.js" type="text/javascript" charset="utf-8"></script>-->
+	<script src="../js/zoom.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/vue.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/magnifier.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/yf_hailanzhijia.js" type="text/javascript" charset="utf-8"></script>
+
+</html>

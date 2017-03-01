@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>toggleCity</title>
+   <link rel="stylesheet" href="../css/bootstrap.css">
+   <link rel="stylesheet" href="../css/ws_toggleCity.css">
+   <script src="../js/vue.js" charset="utf-8"></script>
+   <script src="../js/vue-resource.js" charset="utf-8"></script>
+    <script src="../js/jquery.min.js" charset="utf-8"></script>
+  </head>
+  <body>
+
+    <div id="header">
+
+    </div>
+
+    <section>
+      <div class="tog_wrapper">
+        <div class="tog_title">
+          你当前的位置: <span>首页</span> <span>></span> <span class="currentCity">切换城市</span>
+        </div>
+        <div class="tog_content">
+          <p>
+            当前城市 :  <span class="currentCity orange" id="ws_city">{{city}}</span>
+          </p>
+          <p>
+            <span class="hotCity orange">热门城市</span>
+            <span class="hot_item">北京</span>
+            <span class="hot_item">上海</span>
+            <span class="hot_item">天津</span>
+
+          </p>
+          <p>
+            <span class="latelCity orange">最近访问</span>
+            <span class="hot_item">郑州</span>
+            <span class="hot_item">上海</span>
+            <span class="hot_item">天津</span>
+          </p>
+          <div class="cityList">
+            <ul class="list-unstyled">
+              <li class="clearfix" v-for='item in cityArr'>
+                <span class="flag pull-left">{{item.flag}}</span>
+                <div class="cityItem">
+                  <span v-for='a in item.arr' v-on:click='citySelect(a)'>{{a}}</span>
+                </div>
+
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <iframe src="rj_public_bottom.html" width="100%" height="495px"></iframe>
+
+  <script src="../js/ws_toggleCity.js" charset="utf-8"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $('#header').load('yf_header_encapsulation.html');
+        $('.footer').load('rj_public_bottom.html');
+      })
+    </script>
+
+  </body>
+</html>

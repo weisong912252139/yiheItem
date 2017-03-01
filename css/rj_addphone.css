@@ -1,0 +1,219 @@
+ul {
+	list-style: none;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.addphone-input ul li:nth-child(4) a:hover{
+	text-decoration: none;
+}
+
+body {
+	width: 100%;
+	min-width: 1180px;
+}
+
+.points-content {
+	width: 1180px;
+	margin: 0 auto;
+}
+
+.points {
+	background-color: #f2f2f2;
+	width: 100%;
+	padding-bottom: 40px;
+	overflow: hidden;
+	padding-top: 20px;
+}
+
+.points-left {
+	width: 173px;
+	border: 1px solid #d3d3d3;
+	background-color: #ffffff;
+	padding-bottom: 10px;
+	float: left;
+}
+
+.points-left>p {
+	padding-top: 5px;
+	padding-left: 20px;
+}
+
+.points-left ul {
+	width: 120px;
+	margin-top: -8px;
+}
+
+.points-left ul li {
+	margin-left: 20px;
+	margin-top: 12px;
+	display: inline-block;
+}
+
+.points-left ul li a {
+	color: #666666;
+}
+
+.points-left ul li a:hover {
+	color: #ed7122
+}
+
+.points-left ul li:hover {
+	color: #ff6c00;
+}
+
+.points-left>p {
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.points-left p i {
+	padding-left: 60px;
+}
+
+.points-left>h3 {
+	border-bottom: 1px solid #d3d3d3;
+	height: 40px;
+	padding-left: 20px;
+	color: #666666;
+	font-size: 20px;
+}
+
+.points-left h3 span {
+	color: #ff6c00;
+	padding-right: 7px;
+}
+
+.fonts1>a {
+	color: #ff6c00 !important;
+}
+
+.points-right {
+	float: left;
+	margin-left: 20px;
+}
+
+.place-font {
+	width: 985px;
+	background-color: #ffffff;
+	margin: 0 auto;
+	border: 1px solid #d3d3d3;
+	padding-bottom: 15px;
+	position: relative;
+}
+
+.addphone-first {
+	height: 37px;
+	width: 100%;
+	border-bottom: 1px solid #d3d3d3;
+}
+
+.addphone-first>h3 {
+	font-size: 18px;
+	color: #008de1;
+	margin-left: 20px;
+}
+
+.addphone-input ul {
+	margin-left: 40px;
+	margin-top: 40px;
+}
+
+/*.addphone-input ul li {
+	margin-top: 30px;
+}*/
+.addphone-input ul li:nth-child(7) input{
+	
+	width: 115px;
+	height: 42px;
+}
+.addphone-input ul li:nth-child(7) img{
+	margin-left: 10px;
+	
+}
+
+.addphone-input ul li:nth-child(7) a{
+	margin-left: 10px;
+	color:  #ec6a17;
+}
+.addphone-input ul li:nth-child(2),.addphone-input ul li:nth-child(4),.addphone-input ul li:nth-child(6),.addphone-input ul li:nth-child(8),.addphone-input ul li:nth-child(10){
+	width: 100%;
+	height: 30px;
+	font-size: 12px;
+	color: red;
+	line-height: 25px;
+	visibility: hidden;
+}
+
+.addphone-input ul li:nth-child(9) span{
+	
+	position: absolute;
+	left: 240px;
+	margin-top: 5px;
+	width: 100px;
+	height: 30px;
+	background-color: #008de1;
+	text-align: center;
+	line-height: 30px;
+	
+	
+}
+.addphone-input ul li:nth-child(9) span a{
+color: white;
+
+}
+.addphone-input ul li:nth-child(9) span a:hover{
+text-decoration:none ;
+}
+
+
+.addphone-input ul li input {
+	width: 305px;
+	height: 42px;
+	box-shadow: none;
+	outline: none;
+	padding-left: 10px;
+}
+
+.aler{
+	position: absolute;
+	top: 230px;
+	left: 600px;
+	width: 455px;
+	height: 185px;
+	background-color: #7f7f7f;
+	border-radius: 20px;
+	text-align: center;
+	line-height: 185px;
+	display: none;
+}
+
+.aler p{
+	color: white;
+	font-size: 24px;
+}
+
+.aler p i{
+
+color:  #ec6a17;
+font-size: 30px;
+padding-right: 10px;
+}
+
+.refer1 {
+	margin-top: -10px;
+	margin-left: 42px;
+	background-color: #ec6a17 !important;
+	width: 170px;
+	height: 45px;
+}
+
+
+
+
+
+
+

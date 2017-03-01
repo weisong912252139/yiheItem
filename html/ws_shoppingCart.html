@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>shoppingCart</title>
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/ws_public1.css">
+    <link rel="stylesheet" href="../css/shoppingCart.css">
+    <script src="../js/vue.js" charset="utf-8"></script>
+    <script src="../js/vue-resource.js" charset="utf-8"></script>
+    <link href="http://cdn.bootcss.com/sweetalert/1.1.3/sweetalert.min.css" rel="stylesheet">
+    <!--<link rel="stylesheet" href="../css/font-awesome.min.css">-->
+  </head>
+  <body>
+
+    <header>
+      <div class="nav-top-wrapper">
+        <div class="nav-top-inner">
+          <div class="left_city pull-left">
+						<span>所在城市:</span>
+            <a href="ws_toggleCity.html">
+              <span id="ws_city">北京</span>
+  						<img src="../img/home_page/down.png"/>
+            </a>
+					</div>
+          <ul class="list-unstyled list-inline  pull-right">
+            <li>你好: <a id="personal" href="rj_personal.html"></a></li>
+            <li><a href="ws_logIn.html">退出</a></li>
+            <li>|</li>
+            <li><a href="rj_myunpaid.html">我的订单</a></li>
+            <li>|</li>
+            <li><a href="rj_personal.html">我的消息</a></li>
+            <li>|</li>
+            <li><a href="ws_sellerLogIn.html">我是商家</a></li>
+            <li>|</li>
+            <li>400-100-0907</li>
+          </ul>
+        </div>
+
+      </div>
+
+
+    </header>
+
+     <section>
+       <div class="shoppingCart">
+         <div class="cart_header clearfix">
+           <div class="pull-left">
+             <a href="yf_index.html">
+               <img src="../img/y-Life.png" alt="">
+             </a>
+           </div>
+           <div class="pull-right">
+             <div id="crumbs">
+            	<ul class="list-inline">
+            		<li><a href="javascript:;" class="active">我的购物车</a></li>
+            		<li><a href="javascript:;">确认订单信息</a></li>
+            		<li><a href="javascript:;">提交订单成功</a></li>
+
+            	</ul>
+            </div>
+           </div>
+         </div>
+
+         <div class="myShoppingCart">
+           <div class="cart_title">
+             <span class="glyphicon glyphicon-shopping-cart"></span>
+             <span class="cart_name">购物车</span>
+           </div>
+           <!--购物车列表,此处打算学习使用vue.js-->
+
+           <!--我的购物车 tab -->
+           <div class="shoppingList">
+             <div class="shoppingWrap" v-if='flag'>
+               <table class="table">
+                 <thead>
+                 <tr class="active">
+                   <th>
+                     <div class="checkbox">
+                       <label>
+                         <input type="checkbox" value="" v-bind:checked='checkAllFlag' v-on:click='checkAllShop()'>
+                         <span class="shopName" v-text='shoppingCart[0].result.shopName'></span>
+                       </label>
+                     </div>
+                   </th>
+                   <th>规格</th>
+                   <th>单价</th>
+                   <th>数量</th>
+                   <th>金额</th>
+                   <th>操作</th>
+                 </tr>
+                 </thead>
+                 <tbody>
+                 <tr  v-for="item in shoppingCart[0].result.list">
+                   <td>
+                     <div class="checkbox">
+                       <label>
+                         <input type="checkbox" v-bind:checked='item.checked'  v-on:click='selectProduct(item)'>
+                         <img v-bind:src='item.srcImg' alt="">
+                         <span class="itemDescription" v-html="item.itemDescription"></span>
+                       </label>
+                     </div>
+                   </td>
+                   <td>
+                     <p class="edition" v-text='item.edition'></p>
+                     <p class="color" v-text='item.color'></p>
+                   </td>
+                   <td class="itemPrice" v-cloak>
+                     {{item.itemPrice | formatMoney('元')}}
+                   </td>
+                   <td>
+                     <div class="calc">
+                       <span v-on:click='changeMoney(item, -1)'>-</span>
+                       <input type="text" disabled class="shopNum" v-model='item.shopNum'>
+                       <span v-on:click='changeMoney(item,1)'>+</span>
+                     </div>
+
+                   </td>
+                   <td class="itemSum" v-cloak>
+                     <span>
+                       {{item.shopNum * item.itemPrice | formatMoney('元')}}
+                     </span>
+
+                   </td>
+                   <td>
+                     <a data-toggle="modal" data-target="#warnDel" v-on:click='delConfirm(item)'><span class="glyphicon glyphicon-trash"></span></a>
+                   </td>
+                 </tr>
+                 </tbody>
+                 <tfoot>
+                 <tr>
+                   <td colspan="6" class="text-right">
+                     <p><span>商品金额</span> </p>
+                     <p class="orange"><span v-cloak>
+                       {{totalMoney | formatMoney('元')}}
+                     </span> </p>
+                   </td>
+                 </tr>
+
+                 </tfoot>
+
+
+               </table>
+               <div class="shopTotal">
+                 <span class="checkAll" v-cloak v-on:click='checkAll()'>{{checkAllAll ? '取消全选': '全选' }}</span>
+                 <span class="delSome" data-toggle="modal" v-bind:data-target="delSome" v-on:click='delSomeConfirm()'>批量删除</span>
+                 <p class="pull-right">
+                   商品总计: <span class="totalNum" v-cloak>
+                     {{ totalMoney | formatMoney('元')}}
+                     <a>
+                     </span> <span class="settlement" id="settlementBtn" v-on:click='settlement()'>去结算</span>
+                     </a>
+
+                 </p>
+               </div>
+             </div>
+             <!--如果没有购物信息显示的页面-->
+             <div class="cartDefault" v-else>
+               <div class="defaultContent clearfix">
+                 <span class="glyphicon glyphicon-shopping-cart pull-left"></span>
+                 <div class="pull-right">
+                   <p class="defaultInfo">
+                     你的购物车是空的
+                   </p>
+                   <a href="yf_index.html" class="defaultBtn">去首页看看</a>
+                 </div>
+               </div>
+             </div>
+             <!-- 单选删除模态框 -->
+             <div class="modal fade bs-example-modal-lg" id="warnDel" tabindex="-1" role="dialog" aria-labelledby="a" aria-hidden="true">
+               <div class="modal-dialog">
+                 <div class="modal-content" style="border: 5px solid rgb(219,219,219);border-radius: 0">
+                   <div class="modal-header">
+                     <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                     <h4 class="modal-title text-center" id="a" class="titleAlert">确认删除</h4>
+                   </div>
+                   <div class="modal-footer">
+                     <span class="button gray pull-left" data-dismiss="modal">返回</span>
+                     <span class="button orange add pull-right" data-dismiss="modal" v-on:click='delProduct()'>删除</span>
+                   </div>
+                 </div>
+               </div>
+             </div>
+
+             <!-- 如果点击批量操作没有选中的复选框就提示这个 -->
+             <div class="modal fade bs-example-modal-lg" id="warnSelect" tabindex="-1" role="dialog" aria-labelledby="b" aria-hidden="true">
+               <div class="modal-dialog">
+                 <div class="modal-content" style="border: 5px solid rgb(219,219,219);border-radius: 0">
+                   <div class="modal-header">
+                     <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                     <h4 class="modal-title text-center" id="b" class="titleAlert">请选择你要删除的物品</h4>
+                   </div>
+                   <div class="modal-footer">
+                     <span class="button gray" data-dismiss="modal">返回</span>
+                   </div>
+                 </div>
+               </div>
+             </div>
+
+             <!-- 批量删除操作模态框 -->
+             <div class="modal fade bs-example-modal-lg" id="delSome" tabindex="-1" role="dialog" aria-labelledby="c" aria-hidden="true">
+               <div class="modal-dialog">
+                 <div class="modal-content" style="border: 5px solid rgb(219,219,219);border-radius: 0">
+                   <div class="modal-header">
+                     <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                     <h4 class="modal-title text-center" id="c" class="titleAlert">确认删除所有选中的项目?</h4>
+                   </div>
+                   <div class="modal-footer">
+                     <span class="button gray pull-left" data-dismiss="modal">返回</span>
+                     <span class="button orange add pull-right" data-dismiss="modal" v-on:click='delSomeProduct()'>删除</span>
+                   </div>
+                 </div>
+               </div>
+             </div>
+
+           </div>
+         </div>
+
+
+
+
+
+
+     </section>
+
+
+
+
+     <iframe src="rj_public_bottom.html" frameborder="0" scrolling="no" width="100%" height="477px"></iframe>
+
+
+
+
+
+     <script src="../js/jquery.min.js" charset="utf-8"></script>
+     <script src="../js/citySelect.js"></script>
+     <script src="../js/bootstrap.min.js"></script>
+     <script src="../js/ws_shoppingCart.js" charset="utf-8"></script>
+     <script src="http://cdn.bootcss.com/sweetalert/1.1.3/sweetalert.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>精选商家</title>
+		<link rel="stylesheet" type="text/css" href="../css/bootstrap.css" />
+		<link rel="stylesheet" type="text/css" href="../css/yf_select_merchant.css" />
+		<script src="../js/vue.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+
+	<body>
+		<div id="header"></div>
+		<div id="lunbo"></div>
+		<section>
+			<div class="shop_list">
+				<div class="car_sort" v-for='item in shopList'>
+					<div class="sorts_img">
+						<img v-bind:src='item.urlimg' />
+						<div class="zhongxin">
+							<p>同城汽车装饰中心</p>
+						</div>
+					</div>
+	
+					<div class="yf_phone">
+						<div class="zhezhaoceng"></div>
+						<p>
+							<span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+							<span>魏松</span>
+						</p>
+						<p>
+							<span class="glyphicon glyphicon-phone" aria-hidden="true"></span>
+							<span>123456789102</span>
+						</p>
+						<p>
+							<span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>
+							<span>北京博物馆</span>
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="yf_pagination">
+				<a href="javascript:;"><p class="yf_first">首页</p></a>
+				<div class="tiaozhuan">
+				<a href="javascript:;"><p class="up_page">上一页</p></a>
+				<div class="num_page">
+					<a href="javascript:;"><p class="onpuss">1</p></a>
+					<a href="javascript:;"><p>2</p></a>
+					<a href="javascript:;"><p>3</p></a>
+					<a href="javascript:;"><p>4</p></a>
+					<a href="javascript:;"><p>5</p></a>
+					<a href="javascript:;"><p>6</p></a>
+					<a href="javascript:;"><p>7</p></a>
+					<a href="javascript:;"><p>8</p></a>
+					<a href="javascript:;"><p>9</p></a>
+					<a href="javascript:;"><p>10</p></a>
+				</div>
+				<a href="javascript:;"><p class="down_page">下一页</p></a>
+				</div>
+				<a href="javascript:;"><p class="yf_last">尾页</p></a>
+				<div class="jump_to">
+				共<span>10</span>页，到第<input type="text" />页
+				</div>
+				<button class="btn">确认</button>共20条
+			</div>
+		</section>
+
+		<!--<iframe src="rj_public_bottom.html" width="100%" height="495px" frameborder=0 scrolling="no"></iframe>-->
+		<div id="footer"></div>
+
+	</body>
+	<script src="../js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/yf_select_merchant.js" type="text/javascript" charset="utf-8"></script>
+
+
+
+	<script src="../js/yf_Paging_device.js" type="text/javascript" charset="utf-8"></script>
+
+	
+</html>

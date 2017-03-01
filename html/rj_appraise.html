@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>易和生活港 | 评价</title>
+		<link rel="stylesheet" type="text/css" href="../css/bootstrap.css" />
+
+		<link rel="stylesheet" type="text/css" href="../css/font-awesome.min.css" />
+		<link rel="stylesheet" type="text/css" href="../css/rj_appraise.css" />
+	</head>
+
+	<body>
+		<div id="header"></div>
+
+		<div class="points">
+			<div class="points-content">
+				<div class="points-left">
+					<h3><span class="glyphicon glyphicon-user" aria-hidden="true"></span>个人中心</h3>
+					<p>交易管理<i class="fa fa-angle-right" aria-hidden="true"></i></p>
+					<ul>
+						<li>
+							<a href="rj_myaccount.html">我的账户</a>
+						</li>
+						<li class="fonts1">
+							<a href="rj_myunpaid.html">我的订单</a>
+						</li>
+						<li>
+							<a href="rj_mypoint.html">我的积分</a>
+						</li>
+						<li>
+							<a href="rj_mycoupons.html">我的易和券</a>
+						</li>
+					</ul>
+					<p>会员资料<i class="fa fa-angle-right" aria-hidden="true"></i></p>
+					<ul>
+
+						<li>
+							<a href="rj_personal.html">个人资料</a>
+						</li>
+						<li>
+							<a href="rj_address.html">地址管理</a>
+						</li>
+						<li>
+							<a href="yf_my_collect.html">我的收藏</a>
+						</li>
+						<li>
+							<a href="yf_copy_recent.html">最近浏览</a>
+						</li>
+						<li>
+							<a href="rj_rpassward.html">修改密码</a>
+						</li>
+					</ul>
+					<p>站内信<i class="fa fa-angle-right" aria-hidden="true"></i></p>
+					<ul>
+
+						<li>
+							<a href="rj_mynews.html">我的消息</a>
+						</li>
+
+					</ul>
+
+				</div>
+				<div class="appraise-right">
+					<div class="place-font">
+						<div class="appraise-first">
+							<h3>评价</h3>
+						</div>
+
+						<div class="appraise-body">
+							<div class="appraise-img">
+								<img src="../img/public/rjbko.png" />
+								<p>玛丽布高防护防晒面霜</p>
+							</div>
+							<div class="appraise-point">
+								<div class="point-qq">
+									<ul>
+										<li class="grade1">商品打分
+											<img src="../img/product/hongxing.png" />
+											<img src="../img/product/hongxing.png" />
+											<img src="../img/product/hongxing.png" />
+											<img src="../img/product/hongxing.png" />
+											<img src="../img/product/heixing.png" />
+										</li>
+										<li class="grade2">服务态度
+											<img src="../img/product/hongxing.png" />
+											<img src="../img/product/hongxing.png" />
+											<img src="../img/product/hongxing.png" />
+											<img src="../img/product/hongxing.png" />
+											<img src="../img/product/heixing.png" />
+										</li>
+										<li class="grade3">描述相符
+											<img src="../img/product/hongxing.png" />
+											<img src="../img/product/hongxing.png" />
+											<img src="../img/product/hongxing.png" />
+											<img src="../img/product/hongxing.png" />
+											<img src="../img/product/heixing.png" />
+										</li>
+									</ul>
+								</div>
+
+								<!--<textarea name=""  maxlength="500"></textarea>-->
+								<textarea id="BZ" name="BZ" onkeydown="checkMaxInput(this,500)" onkeyup="checkMaxInput(this,500)" onfocus="checkMaxInput(this,500)" onblur="checkMaxInput(this,500);resetMaxmsg()" placeholder="宝贝真的好吗?来分享一下您的感受"></textarea>
+								<div class="appraise-add">
+									<ul class="rj_file">
+										<li><img src="../img/public/rjbn.png" /> <input type="file" /></li>
+										<li><img src="../img/public/rjbn.png" /> <input type="file" /></li>
+										<li><img src="../img/public/rjbn.png" /> <input type="file" /></li>
+										<li><img src="../img/public/rjbn.png" /> <input type="file" /></li>
+									</ul>
+								</div>
+
+								<button type="button" class="btn btn-warning refer1">发表评论</button>
+							</div>
+
+						</div>
+
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+		<!--<iframe src="rj_public_bottom.html" width="100%" height="477"></iframe>-->
+		<div id="footer"></div>
+	</body>
+	<script src="../js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/submitImg.js" charset="utf-8"></script>
+	<script src="../js/rj_appraise.js" type="text/javascript" charset="utf-8"></script>
+
+	<script type="text/javascript">
+		$('#header').load("yf_header_encapsulation.html");
+		$('#footer').load("rj_public_bottom.html");
+		//多行文本输入框剩余字数计算
+		function checkMaxInput(obj, maxLen) {
+			if(obj == null || obj == undefined || obj == "") {
+				return;
+			}
+			if(maxLen == null || maxLen == undefined || maxLen == "") {
+				maxLen = 500;
+			}
+			var strResult;
+			var $obj = $(obj);
+			var newid = $obj.attr("id") + 'msg';
+			if(obj.value.length > maxLen) { //如果输入的字数超过了限制
+				obj.value = obj.value.substring(0, maxLen); //就去掉多余的字
+				strResult = '<span id="' + newid + '"class=\'Max_msg\' ><br/>最多评论500字,剩' + (maxLen - obj.value.length) + '字</span>'; //计算并显示剩余字数
+			} else {
+				strResult = '<span id="' + newid + '"class=\'Max_msg\' ><br/>最多评论500字,剩' + (maxLen - obj.value.length) + '字</span>'; //计算并显示剩余字数
+			}
+			var $msg = $("#" + newid);
+			if($msg.length == 0) {
+				$obj.after(strResult);
+			} else {
+				$msg.html(strResult);
+			}
+		}
+		//清空剩除字数提醒信息
+		function resetMaxmsg() {
+			$("span.Max_msg").remove();
+		}
+	</script>
+
+</html>

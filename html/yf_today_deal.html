@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>今日特价</title>
+		<link rel="stylesheet" type="text/css" href="../css/bootstrap.css" />
+		<link rel="stylesheet" type="text/css" href="../css/swiper.min.css" />
+		<link rel="stylesheet" type="text/css" href="../css/yf_today_deal.css" />
+		<script src="../js/vue.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+
+	<body>
+		<div id="header"></div>
+		<div id="lunbo"></div>
+
+		<section>
+			<!--限量抢购-->
+			<div class="Limited_buying">
+			<div class="">
+				<img src="../img/today_deal/limit.png" />
+			</div>
+			<a href="javascript:;">
+				<div class="shows">
+					<div class="shop_list">
+						<div class="car_sort" v-for='item in shopList'>
+							<div class="sorts_img">
+								<img v-bind:src='item.urlimg' />
+							</div>
+							<div class="yf_info">
+								<p>送礼送健康，快来看啊，快来买啊，走过路过的朋友不要错过，买一送一，过年送家人送朋友</p>
+								<span class="current_price">￥<span>998.00</span></span>
+								<s class="Original_price">￥<span>2000.0</span></s>
+							</div>
+						</div>
+					</div>
+				</div>
+			</a>
+			</div>
+			<!--今日特价-->
+			<div class="today_tejia">
+				<div class="commodity">
+					<img src="../img/today_deal/Commodity.png" />
+				</div>
+				<a href="javascript:;">
+					<div class="shows1">
+						<div class="shop_list1">
+							<div class="car_sort" v-for='item in shopList'>
+								<div class="sorts_img">
+									<img v-bind:src='item.urlimg' />
+								</div>
+								<div class="yf_info">
+									<p>送礼送健康，快来看啊，快来买啊，走过路过的朋友不要错过，买一送一，过年送家人送朋友</p>
+									<span class="current_price">￥<span>998.00</span></span>
+									<s class="Original_price">￥<span>2000.0</span></s>
+								</div>
+							</div>
+						</div>
+					</div>
+				</a>
+			</div>
+
+			<div class="yf_pagination">
+				<p class="yf_first">首页</p>
+				<div class="tiaozhuan">
+					<p>上一页</p>
+					<p class="onpuss">1</p>
+					<p class="onpuss">2</p>
+					<p class="onpuss">3</p>
+					<p class="onpuss">4</p>
+					<p class="onpuss">5</p>
+					<p class="onpuss">6</p>
+					<p class="onpuss">7</p>
+					<p class="onpuss">8</p>
+					<p class="onpuss">9</p>
+					<p class="onpuss">10</p>
+					<p>下一页</p>
+				</div>
+				<p class="yf_last">尾页</p>
+				<div class="jump_to">
+					共<span>10</span>页，到第<input type="text" />页
+				</div>
+				<button class="btn">确认</button>共20条
+			</div>
+		</section>
+
+		<!--<iframe src="rj_public_bottom.html" width="100%" height="495px" frameborder=0 scrolling="no"></iframe>-->
+		<div id="footer"></div>
+	</body>
+	<script src="../js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/yf_today_deal.js" type="text/javascript" charset="utf-8"></script>
+
+</html>

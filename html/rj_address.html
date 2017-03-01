@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>易和生活港 | 地址管理</title>
+		<link rel="stylesheet" type="text/css" href="../css/bootstrap.css" />
+		<link rel="stylesheet" type="text/css" href="../css/font-awesome.min.css" />
+		<link rel="stylesheet" type="text/css" href="../css/rj_address.css" />
+		<link rel="stylesheet" href="../css/ws_selectCity.css" />
+		<link href="http://cdn.bootcss.com/sweetalert/1.1.3/sweetalert.min.css" rel="stylesheet">
+	</head>
+	<body>
+		<!--<div class="outdiv">
+			<iframe src="yf_header_encapsulation.html" width="100%" height="100%" frameborder='0' scrolling="no"></iframe>
+		</div>-->
+		<div id="header"></div>
+		<div class="points">
+			<div class="points-content">
+				<div class="points-left">
+					<h3><span class="glyphicon glyphicon-user" aria-hidden="true"></span>个人中心</h3>
+					<p>交易管理<i class="fa fa-angle-right" aria-hidden="true"></i></p>
+					<ul>
+						<li> <a href="rj_myaccount.html">我的账户</a></li>
+						<li><a href="rj_myunpaid.html">我的订单</a></li>
+						<li><a href="rj_mypoint.html">我的积分</a></li>
+						<li><a href="rj_mycoupons.html">我的易和券</a></li>
+					</ul>
+					<p>会员资料<i class="fa fa-angle-right" aria-hidden="true"></i></p>
+					<ul>
+						<li><a href="rj_personal.html">个人资料</a></li>
+						<li class="fonts1"><a href="rj_address.html">地址管理</a></li>
+						<li><a href="yf_my_collect.html">我的收藏</a></li>
+						<li><a href="yf_copy_recent.html">最近浏览</a></li>
+						<li><a href="rj_rpassward.html">修改密码</a></li>
+					</ul>
+					<p>站内信<i class="fa fa-angle-right" aria-hidden="true"></i></p>
+					<ul>
+						<li><a href="rj_mynews.html">我的消息</a></li>
+					</ul>
+
+				</div>
+				<div class="points-right">
+					<div class="address1">
+						<div class="place-font">
+
+							<div class="heads">
+								<h3>收货地址</h3>
+								<button type="button" class="btn btn-warning refer1">添加新地址</button>
+							</div>
+
+							<div class="succeed">
+
+								<p><i class="fa fa-pencil-square-o" aria-hidden="true"></i></span> 暂无收货地址,请点击 <span class="newWay"><a href="#">添加新地址</a></span> </p>
+
+							</div>
+						</div>
+					</div>
+
+					<div class="address2">
+						<div class="place-font">
+							<div class="heads">
+								<h3>添加新地址</h3>
+
+							</div>
+
+							<div class="person-left">
+								<ul>
+									<li><span>*</span>收货人姓名:</li>
+									<li><span>*</span>所在地区 :</li>
+									<li><span>*</span>详细地址 :</li>
+									<li><span>*</span>联系电话 :
+									</li>
+								</ul>
+
+							</div>
+
+							<div class="person-right">
+								<ul>
+									<li><input type="text" id="name" maxlength="16" placeholder="请输入姓名,字数不超过16个汉字" /></li>
+
+									<li>
+										<div class="item" id="Province">
+											<i id="myProvince">请选择省份</i>
+											<ul>
+												<li>请选择省份</li>
+											</ul>
+											<input type="hidden" name="cho_Province" value="请选择省份" />
+										</div>
+										<div class="item" id="City">
+											<i id="myCity">请选择城市</i>
+											<ul>
+												<li>请选择城市</li>
+											</ul>
+											<input type="hidden" name="cho_City" value="请选择城市" />
+										</div>
+										<div class="item" id="Area">
+											<i id="myArea">请选择地区</i>
+											<ul>
+												<li>请选择地区</li>
+											</ul>
+											<input type="hidden" name="cho_Area" value="请选择地区" />
+										</div>
+									</li>
+									<li><input type="text" id="detailsArea" placeholder="请输入详细地址,如街道,门牌号等" /></li>
+									<li><input type="text" class="inputs1" id="myPhone" placeholder="请输入有效手机号码" /> 或固定电话: <span><input type="text"  class="inputs2" />  -  <input type="text" class="inputs3"  /></span></li>
+									<li> <input type="checkbox" id="isDefault" /> 设为默认地址</li>
+								</ul>
+								<button type="button" id="ws_addNewaddress" class="btn btn-warning refer">确认提交</button>
+								<button type="button" class="btn btn-warning myrefer">返回</button>
+							</div>
+
+						</div>
+
+					</div>
+
+					<div class="address3">
+						<div class="place-font">
+							<div class="heads">
+								<h3>添加新地址</h3>
+								<button type="button" class="btn btn-warning refer1">添加新地址</button>
+
+							</div>
+
+							<div class="content-address">
+								<ul>
+									<li>序号</li>
+									<li>收货人</li>
+									<li>所在区域</li>
+									<li>街道地址</li>
+									<li>联系电话</li>
+									<li>备注</li>
+									<li>操作</li>
+
+								</ul>
+							</div>
+							<div class="content-three">
+								<div class="content-address1">
+									<!--<ul>
+										<li>1</li>
+										<li>魏松</li>
+										<li>河南省南阳市新野县</li>
+										<li>新甸镇新甸小学五年级一班</li>
+										<li>13522335566</li>
+										<li>家里的地址</li>
+										<li><span class="add1"> <a href="#">设为默认地址</a> </span>| <span class="add2"><a  data-toggle='modal' data-target="#updateAddModel" >修改 </a></span> |</span> <span class="add3"><a href="">删除</a></span> </li>
+
+									</ul>-->
+
+								</div>
+							</div>
+
+						</div>
+
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+		<!-- 点击修改模态框操作 -->
+		<div class="modal fade bs-example-modal-lg" id="updateAddModel" tabindex="-1" role="dialog" aria-labelledby="cm" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content" style="border: 5px solid rgb(219,219,219);border-radius: 0">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+						<h4 class="modal-title" id="cm" class="titleAlert">修改地址</h4>
+					</div>
+					<div class="modal-body">
+						<form class="form-horizontal">
+							<div class="form-group">
+								<label for="aaname" class="col-md-3 control-label">收货人姓名 :</label>
+								<div class="col-md-9">
+									<input type="text" class="form-control" id="aaname" placeholder="收货人姓名">
+								</div>
+							</div>
+
+							<div class="form-group">
+								<label class="col-md-3 control-label">收货地区 :</label>
+								<select id="province" name="province" onchange="doProvAndCityRelation();">
+    　　　　　　　　<option id="choosePro" value="-1">所在省份</option>
+    　　　　　　</select>
+								<select id="citys" name="city" onchange="doCityAndCountyRelation();">
+   　　　　　　　　<option id='chooseCity' value='-1'>所在城市</option>
+   　　　　　　</select>
+
+								<select id="county" name="county">
+   　　　　　　　　<option id='chooseCounty' value='-1'>所在区/县</option>
+  　　　 </select>
+
+							</div>
+							<div class="form-group">
+								<label for="detailsadd" class="col-md-3 control-label">详细地址 :</label>
+								<div class="col-md-9">
+									<input type="text" class="form-control" id="detailsadd" placeholder="详细地址">
+								</div>
+							</div>
+							<div class="form-group">
+								<label for="phone" class="col-md-3 control-label">联系电话 :</label>
+								<div class="col-md-9">
+									<input type="text" class="form-control  today1" id="phone" placeholder="联系电话">
+								</div>
+
+							</div>
+							<div class="form-group">
+								<div class="col-md-offset-3 col-md-10">
+									<div class="checkbox">
+										<label>
+                                   <input type="checkbox" id="ws_checked"> 设置为默认地址
+                                 </label>
+									</div>
+								</div>
+							</div>
+						</form>
+					</div>
+					<div class="modal-footer">
+						<span class="button gray pull-left" data-dismiss="modal">返回</span>
+						<span class="button orange add pull-right" data-dismiss="modal" id='updateAddress'>保存 </span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--<div>
+			<iframe src="rj_public_bottom.html" width="100%" height="500px"></iframe>
+		</div>-->
+		<div id="footer"></div>
+	</body>
+	<script src="../js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="http://cdn.bootcss.com/jquery-migrate/1.4.1/jquery-migrate.min.js"></script>
+	<script src="../js/city.min.js"></script>
+	<script src="../js/jquery.cityselect.js"></script>
+	<script src="../js/citySelect.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="http://cdn.bootcss.com/sweetalert/1.1.3/sweetalert.min.js"></script>
+	<script src="../js/ws_manageAddress.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#header').load('yf_header_encapsulation.html')
+			$('#footer').load('rj_public_bottom.html')
+		})
+	</script>
+
+</html>

@@ -1,0 +1,695 @@
+section{
+  width: 100%;
+  min-width: 1180px;
+  /* background: rgb(235,234,232); */
+}
+
+section .shoppingCart{
+  width: 1180px;
+  border: 1px solid rgb(201,201,201);
+  margin: 50px auto;
+  padding: 40px;
+
+}
+
+.shoppingCart .cart_header{
+  /* background: blue; */
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgb(201,201,201);
+}
+.shoppingCart .cart_header .pull-left img{
+  line-height: 130px;
+}
+
+/* 购物车头部的面包屑效果 */
+#crumbs{
+  margin-top: 20px;
+}
+#crumbs ul{
+  margin: 0;
+}
+
+#crumbs ul li a {
+	display: block;
+	float: left;
+	background: rgb(223,223,223);
+	text-align: center;
+	padding: 15px 20px 15px 50px;
+	position: relative;
+	/* margin: 0 1px 0 0; */
+  font-weight: 200;
+	font-size: 20px;
+	text-decoration: none;
+	color: rgb(38,38,38);
+  /* transition: all 1s linear; */
+}
+#crumbs ul li:first-child a{
+  padding-left: 30px;
+}
+#crumbs ul li a.active{
+  background: rgb(229,84,20);
+  color: #fff;
+}
+#crumbs ul li a.active:after{
+  border-left: 40px solid rgb(229,84,20);
+}
+
+ #crumbs ul li a:after {
+  content: "";
+  position: absolute;
+  right: -40px;
+  top: 0;
+  z-index: 3;
+  border-top: 29px solid transparent;
+  border-bottom: 29px solid transparent;
+  border-left: 40px solid rgb(223,223,223);
+}
+
+#crumbs ul li a:before {
+  content: "";
+  border-top: 29px solid transparent;
+  border-bottom: 29px solid transparent;
+  border-left: 40px solid #fff;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 2;
+
+}
+
+
+#crumbs ul li:first-child a:before {
+  display: none;
+}
+
+
+#crumbs ul li:last-child a:after {
+  display: none;
+}
+
+
+
+/* #crumbs ul li a:hover {
+  background: #fa5ba5;
+}
+  #crumbs ul li a:hover:after {
+    border-left-color: #fa5ba5;
+  }  */
+/* 购物车标题 */
+.shoppingCart .cart_title{
+  border-bottom: 1px solid rgb(201,201,201);
+}
+.shoppingCart .cart_title .cart_name{
+  line-height: 90px;
+  font-size: 22px;
+  color: rgb(83,83,83);
+  font-weight: 200;
+}
+.shoppingCart .cart_title .glyphicon{
+  color: rgb(243,116,10);
+  font-size: 34px;
+}
+
+/*  */
+.shoppingCart .myShoppingCart{
+  /* display: none; */
+}
+.myShoppingCart .cartDefault{
+  margin: 150px auto;
+  /* background: lime; */
+  text-align: center;
+}
+.myShoppingCart .cartDefault .defaultContent{
+   width: 27%;
+   /* background: blue; */
+   margin: 0 auto;
+   position: relative;
+}
+.myShoppingCart .cartDefault .glyphicon{
+  font-size: 120px;
+  color: rgb(201,201,201);
+}
+.myShoppingCart .cartDefault .defaultInfo{
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 20;
+  text-align: left;
+  font-size: 20px;
+  font-weight: 200;
+}
+.myShoppingCart .cartDefault .defaultBtn{
+  -webkit-user-select:none;
+  -moz-user-select:none;
+  -ms-user-select:none;
+  user-select:none;
+  line-height: 50px;
+  display: inline-block;
+  width: 150px;
+  height: 50px;
+  text-align: center;
+  border-radius: 6px;
+  color: #fff;
+  font-weight: 200;
+  font-size: 16px;
+  background: rgb(229,84,0);
+  margin-top: 20px;
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+.myShoppingCart .cartDefault a:hover{
+  text-decoration: none;
+}
+
+
+
+/* 购物车列表 */
+table{
+  border: 1px solid rgb(201,201,201);
+  font-size: 16px;
+  font-weight: 200;
+  -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+    margin-top: 25px;
+}
+thead tr th{
+  text-align: center;
+  /* line-height: 40px; */
+}
+thead tr th:first-child{
+  text-align: left;
+}
+
+
+tbody tr td {
+  text-align: center;
+}
+tbody tr td a{
+  color: rgb(34,210,218);
+}
+tbody tr td:nth-child(1) {
+  text-align: left;
+
+}
+tbody tr td:nth-child(2){
+  padding-top: 25px;
+}
+
+tbody tr td:nth-child(4) .calc{
+  border: 1px solid rgb(201,201,201);
+  width: 120px;
+  margin: 0 auto;
+  background: rgb(239,239,239);
+}
+tbody tr td:nth-child(4) span{
+  display: inline-block;
+  padding: 3px 8px;
+  font-weight: 900;
+  cursor: pointer;
+  font-size: 18px;
+}
+{
+  border: 1px solid rgb(201,201,201);
+  width: 120px;
+  margin: 0 auto;
+  background: rgb(239,239,239);
+}
+tbody tr td:nth-child(5) {
+  /* background: red; */
+  width: 140px;
+}
+tbody tr td:nth-child(5) span{
+  /* background: blue; */
+}
+tbody tr td:nth-child(4) input{
+  margin: 0;
+  padding: 0;
+  height: 32px;
+  border: 1px solid rgb(201,201,201);
+  border-width: 0 1px 0 1px;
+
+
+}
+tbody tr td:nth-child(n + 3){
+  padding-top: 38px;
+}
+
+tbody tr td:nth-child(4){
+  padding-top: 33px;
+}
+.table thead .checkbox{
+  margin: 0;
+}
+.table thead .checkbox input{
+  font-size: 50px;
+}
+.table tbody .checkbox{
+  margin: 0;
+  /* padding: 0; */
+}
+.table tbody .checkbox img{
+  width: 88px;
+  height: 85px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.table tbody .checkbox input{
+  margin-top: 35px;
+  font-size: 50px;
+}
+
+thead tr th:first-child{
+  padding-left: 40px;
+  width: 460px;
+}
+tbody tr td:first-child{
+  padding-left: 40px;
+  width: 460px;
+/*   background: red; */
+}
+tbody .shopNum{
+  width: 50px;
+  border: 1px solid rgb(201,201,201);
+  text-align: center;
+}
+tfoot td{
+  position: relative;
+}
+tfoot td p{
+  margin-left: 600px;
+  font-size: 22px;
+  line-height: 35px;
+  /* background: lime; */
+  text-align: center;
+}
+tfoot td p span{
+  display: inline-block;
+  width: 145px;
+  text-align: center;
+  /* background: red; */
+}
+tfoot td p.orange{
+  color: rgb(242,86,9);
+}
+
+/* 订单页面购买的商品数量 */
+table .orderNumWrap{
+
+}
+table .orderNumWrap .orderNumber{
+  font-size: 16px;
+  font-weight: 200;
+}
+
+/* 下面的全选 和 批量删除  总价计算样式 */
+.shoppingList .shopTotal>span{
+  display: inline-block;
+  width: 100px;
+  text-align: center;
+  height: 35px;
+  line-height: 35px;
+  background: rgb(32,111,187);
+  color: #fff;
+  cursor: pointer;
+  margin-right: 30px;
+  margin-top: 10px;
+  -webkit-user-select:none;
+  -moz-user-select:none;
+  -ms-user-select:none;
+  user-select:none;
+}
+
+.shoppingList .shopTotal p{
+  font-size: 22px;
+  -webkit-user-select:none;
+  -moz-user-select:none;
+  -ms-user-select:none;
+  user-select:none;
+}
+.shoppingList .shopTotal p .totalNum{
+  font-size: 30px;
+  color: rgb(229,84,20);
+}
+.shoppingList .shopTotal p .settlement{
+  display: inline-block;
+  background: rgb(229,84,20);
+  text-align: center;
+  height: 45px;
+  width: 172px;
+  line-height: 45px;
+  color: #fff;
+  border-radius: 6px;
+  margin-left: 100px;
+  font-weight: 200;
+  cursor: pointer;
+}
+
+
+/* 确认订单 切换页 */
+.orderSure{
+  /*display: none;*/
+}
+.orderSure .addNewAddress{
+  -webkit-user-select:none;
+  -moz-user-select:none;
+  -ms-user-select:none;
+  user-select:none;
+  line-height: 50px;
+  display: inline-block;
+  width: 150px;
+  height: 50px;
+  text-align: center;
+  border-radius: 6px;
+  color: #fff;
+  font-weight: 200;
+  font-size: 16px;
+  background: rgb(229,84,0);
+  margin-top: 20px;
+  cursor: pointer;
+}
+.addressList ul li{
+  line-height: 45px;
+  background: rgb(253,250,232);
+  font-size: 16px;
+  padding: 0 20px;
+  cursor: pointer;
+}
+
+.addressList ul li.check{
+  background: rgb(73,176,170);
+}
+.addressList .allAddre li input{
+  display: inline-block;
+  margin-top: 15px;
+  margin-right: 10px;
+}
+.addressList .allAddre li label span{
+  margin-right: 8px;
+}
+.addressList .allAddre li .radio>span{
+  padding: 0 20px;
+  cursor: pointer;
+  color: rgb(32,111,187);
+}
+.addressList .allAddre li .radio .setDefaultAddress{
+  color: rgb(229,84,20);
+}
+.addressList .addressWarnInfo{
+  line-height: 30px;
+}
+.addressList .addressWarnInfo span{
+  color: rgb(34,120,218);
+  cursor: pointer;
+}
+.addressList .addressWarnInfo span.addressUp{
+  margin: 0 40px;
+}
+
+.orderList{
+  border-top: 2px solid green;
+}
+/*table{
+	border:1px solid red !important;
+}*/
+/*tbody,thead{
+	border-right:1px solid red !important;
+}*/
+.orderList .arriveShop{
+  position: absolute;
+  left: 380px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.orderList .sellerSend{
+  position: absolute;
+  left: 520px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.orderList .radio label{
+  padding: 10px 20px;
+  font-size: 18px;
+  color: rgb(83,83,83);
+  font-weight: 200;
+}
+.orderList .invoice label{
+  font-weight: 200;
+  font-size: 16px;
+}
+.orderList .invoice .form-control{
+  width: 400px;
+}
+.orderList>.form-control{
+  width: 600px;
+  margin: 20px 0 40px;
+}
+.calcSum{
+  padding: 35px 0 30px;
+}
+.border_bottom{
+  border-bottom: 1px solid rgb(201,201,201);
+}
+
+.calcSum p{
+  font-size: 20px;
+  font-weight: 200;
+  text-align: right;
+}
+.calcSum p .submitOrder{
+  -webkit-user-select:none;
+  -moz-user-select:none;
+  -ms-user-select:none;
+  user-select:none;
+  line-height: 50px;
+  display: inline-block;
+  width: 170px;
+  height: 50px;
+  text-align: center;
+  border-radius: 6px;
+  color: #fff;
+  font-weight: 200;
+  font-size: 16px;
+  background: rgb(229,84,0);
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.calcSum p input{
+  width: 120px;
+  margin: 0 10px;
+}
+.calcSum p input:focus{
+  outline: none;
+}
+.calcSum p .sumNum{
+  font-size: 24px;
+  color: rgb(242,86,10);
+}
+.calcSum p .reduceNum{
+  font-size: 20px;
+  color: rgb(242,86,10);
+}
+
+/* 修改地址模态框的样式修改 */
+.titleAlert{
+  color: rgb(73,148,225);
+  padding-left: 20px;
+}
+.modal-dialog form label{
+  font-size: 18px;
+  color: rgb(38,38,38);
+  font-weight: 200;
+}
+.modal-dialog form .addA{
+  padding-left: 10px;
+  box-sizing: border-box;
+  margin-left: 18px;
+  height: 34px;
+  border: 1px solid rgb(201,201,201);
+  outline: none;
+  width: 120px;
+  border-radius: 5px;
+}
+.modal-dialog .modal-footer{
+  border: none;
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.modal-dialog .modal-footer .button{
+  width: 90px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  display: inline-block;
+  color: #fff;
+  font-weight: 200;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+}
+.modal-dialog .modal-footer .gray{
+  background: rgb(135,135,135);
+  margin-right: 10px;
+}
+.modal-dialog .modal-footer .orange{
+  background: rgb(229,84,20);
+}
+.modal-dialog .close{
+  font-size: 50px;
+  position: absolute;
+  right: 20px;
+  top: -2px;
+}
+.modal-dialog .close:focus{
+  outline: none;
+}
+
+/* 订单提交成功界面 */
+.orderSuccess{
+  /*display: none;*/
+  /* background: gray; */
+}
+.orderSuccess .successInfo{
+  padding: 40px;
+  text-align: center;
+}
+.orderSuccess .successInfo .successIcon{
+  color: rgb(242,86,10);
+  font-size: 60px;
+  font-weight: 200;
+}
+.orderSuccess .successDescription{
+  font-size: 25px;
+  color: rgb(83,83,83);
+  font-weight: 200;
+}
+.orderSuccess .successDescription span{
+  color: rgb(242,86,10);
+}
+
+.successOrder{
+  /* background: lime; */
+}
+
+.successOrder .successAddress{
+  line-height: 35px;
+  font-size: 18px;
+  font-weight: 200;
+  background: rgb(253,240,232);
+  border: 1px solid rgb(201,201,201);
+  padding-left: 10px;
+}
+.successOrder .successAddress span{
+  color: rgb(32,111,187);
+  font-size: 22px;
+}
+.successOrder .successMoney{
+  line-height: 35px;
+  margin-top: 35px;
+  font-size: 20px;
+  font-weight: 200;
+}
+.successOrder .successMoney .successPrice{
+  color: rgb(229,84,20);
+  font-size: 30px;
+}
+.successOrder .successMoney .successNumber{
+  font-size: 18px;
+  color: rgb(83,83,83);
+}
+.orderSuccess .radio label{
+  margin-right: 20px;
+  padding: 20px;
+  line-height: 50px;
+  /* background: lime; */
+}
+.orderSuccess .radio label input{
+  vertical-align: middle;
+  margin-top: 20px;
+  margin-right: 15px;
+  font-size: 25px;
+}
+.orderSuccess .radio label img{
+  margin-left: 15px;
+  border: 1px solid rgb(201,201,201);
+}
+.orderSuccess .radio label:nth-child(n+2) img{
+  padding: 4px 6px;
+}
+.orderSuccess .payWhich{
+  padding: 30px 100px;
+  border: 1px solid rgb(201,201,201);
+  margin-bottom: 50px;
+}
+
+.orderSuccess .whichContent{
+  display: flex;
+  margin-bottom: 40px;
+  justify-content: space-around;
+}
+.orderSuccess .whichContent p{
+  font-size: 19px;
+  font-weight: 200;
+  line-height: 65px;
+}
+.orderSuccess .whichContent .or{
+  line-height: 294px;
+  font-size: 22px;
+  font-weight: 200;
+}
+.orderSuccess .ImmediatePayment{
+  display: inline-block;
+  width: 170px;
+  height: 45px;
+  background: rgb(229,84,20);
+  font-size: 18px;
+  color: #fff;
+  line-height: 45px;
+  text-align: center;
+  border-radius: 6px;
+  margin-top: 40px;
+  cursor: pointer;
+  -webkit-user-select:none;
+  -moz-user-select:none;
+  -ms-user-select:none;
+  user-select:none;
+}
+
+/* 放置闪烁的方法 */
+[v-cloak] {
+display: none;
+}
+
+/* 对弹出的删除的莫泰框进行定位 */
+
+.modal-dialog {
+  position: absolute;
+  left: 30%;
+  top:30%;
+}
+
+/* 默认地址为空的设置 */
+.addressDefault {
+  text-align: center;
+  font-size: 20px;
+  padding: 100px;
+}
+.addressDefault .glyphicon{
+  color: rgb(229,88,31);
+  font-size: 22px;
+}
+.addressDefault .addNewAddressTwo{
+  color: rgb(229,88,31);
+  font-size: 22px;
+  cursor: pointer;
+}

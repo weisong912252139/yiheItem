@@ -1,0 +1,36 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	width: 100%;
+	min-width: 1180px;
+}
+
+.find {
+	position: relative;
+	text-align: center;
+	background-image: url(../img/public/rj_defind.png);
+	background-repeat: no-repeat;
+	background-position: top;
+	height: 800px;
+}
+
+.find img {
+	width: 1180px;
+	background-color: red;
+}
+
+.refer {
+	background-color: #ec6a17 !important;
+	margin-top: 650px;
+}
+
+.refer1 {
+	background-color: #008de1 !important;
+	outline: none !important;
+	border-color: #008de1 !important;
+	margin-top: 650px;
+	margin-left: 150px;
+}

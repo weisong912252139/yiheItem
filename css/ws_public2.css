@@ -1,0 +1,163 @@
+/* 这个是 登录和注册的公共css 样式部分 已经提取出来单独引入  */
+
+.nav-middle .title{
+  font-size: 36px;
+  color: rgb(135,135,135);
+}
+section{
+  width: 100%;
+  min-width: 1180px;
+  background: rgb(34,120,218);
+}
+section .log_form{
+  -webkit-user-select:none;
+  -moz-user-select:none;
+  -ms-user-select:none;
+  user-select:none;
+}
+section .log_wrap{
+  position: relative;
+  width: 1180px;
+  height: 610px;
+  background:url('../img/public/log_bg.png') no-repeat 10% bottom;
+  margin: 0 auto;
+}
+section .log_seller{
+  background:url('../img/public/brand_login.png') no-repeat 15% 15%;
+}
+
+section .log_wrap .log_form{
+  position: absolute;
+  right: 40px;
+  top: 50px;
+  background: #fff;
+  width: 388px;
+  height: 510px;
+  padding: 10px 40px 40px;
+}
+.log_form .log_ipt,.log_form .log_checkNum,.log_form .log_phoneCheckNum{
+  position: relative;
+}
+
+.log_form .log_ipt input{
+  width: 100%;
+  height: 45px;
+  border: 1px solid rgb(201,201,201);
+  box-sizing: border-box;
+  margin-bottom: 30px;
+  padding-left: 20px;
+}
+.log_form .warningInfo{
+  position: absolute;
+  left:15px;
+  top:50px;
+  visibility: hidden;
+  /*line-height: 30px;*/
+  color: red;
+}
+
+.log_form p.active{
+  visibility: visible;
+}
+input::-webkit-input-placeholder {
+ font-weight: 200;
+ color: rgb(143,143,143);
+}
+.log_form .log_checkNum{
+  margin-bottom: 15px;
+}
+.log_form .log_checkNum input{
+  width: 110px;
+  height: 45px;
+  padding-left: 20px;
+}
+.log_form .log_checkNum .checkNum{
+  display: inline-block;
+  /* text-align: center; */
+  width: 65px;
+  height: 45px;
+  padding: 8px 20px 0 10px;
+  background: rgb(219,249,213);
+  margin: 0 10px;
+  /* letter-spacing: 2px; */
+  font-size: 20px;
+}
+
+.log_form .log_checkNum .changeNum{
+  color: green;
+  cursor: pointer;
+}
+input:focus{
+  outline: none;
+}
+
+.log_form .log_btn{
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 30px;
+}
+.log_form .log_btn a{
+  display: inline-block;
+  width: 100px;
+  height: 45px;
+  color: white;
+  font-size: 22px;
+  text-align: center;
+  line-height: 45px;
+  font-weight: 100;
+  border-radius: 6px;
+
+}
+
+.log_form .log_btn{
+  border-bottom: black dashed 1px;
+}
+.log_form .log_btn a:hover{
+  text-decoration: none;
+}
+
+
+/* 手机验证码 */
+.log_phoneCheckNum{
+  border: 1px solid rgb(201,201,201);
+}
+
+.log_phoneCheckNum{
+  position: relative;
+  margin-bottom: 30px;
+  /*margin-top: 30px;*/
+  height: 45px;
+  /* background: lime; */
+}
+.log_phoneCheckNum input{
+  border: none;
+  line-height: 40px;
+  padding-left: 20px;
+  /* background: red; */
+}
+.log_phoneCheckNum .getCheck{
+  float: right;
+  margin: 6px;
+  display: inline-block;
+  width: 100px;
+  height: 33px;
+  text-align: center;
+  line-height: 33px;
+  background: rgb(34,120,218);
+  color: #fff;
+  font-weight: 100;
+  cursor: pointer;
+}
+.log_phoneCheckNum .layerShielding{
+  display: none;
+  background: rgba(201,201,201,0.2);
+  position: absolute;
+  right:6px;
+  top:6px;
+  width:100px;
+  height:33px;
+  z-index: 10;
+}
+.log_phoneCheckNum span.active{
+  display: block;
+}

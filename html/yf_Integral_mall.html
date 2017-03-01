@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>积分商城</title>
+		<link rel="stylesheet" type="text/css" href="../css/bootstrap.css" />
+		<link rel="stylesheet" type="text/css" href="../css/swiper.min.css" />
+		
+		<link rel="stylesheet" type="text/css" href="../css/yf_Integral_mall.css"/>
+		<script src="../js/vue.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="header"></div>
+		<div id="lunbo"></div>
+
+		<section>
+			<div class="integral_mall">
+				<a href="javascript:;">
+					<div class="shows">
+						<div class="shop_list">
+							<div class="car_sort" v-for='item in shopList'>
+								<div class="sorts_img">
+									<img v-bind:src='item.urlimg' />
+								</div>
+								<div class="yf_info">
+									<p>送礼送健康，快来看啊，快来买啊，走过路过的朋友不要错过，买一送一，过年送家人送朋友</p>
+									<div class="jiage">
+								<span class="current_price">积分：<span>50</span></span>
+								<span class="Original_price">￥<span>2000.0</span></span>
+								</div>
+								<p class="convertBtn" data-toggle="modal" data-target="#myModal">兑换</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</a>
+			</div>
+
+
+<div class="modal fade in bs-example-modal-lg" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content" style="border: 5px solid rgb(219,219,219);border-radius: 0">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            <h4 class="modal-title" id="myModalLabel">收货地址</h4>
+          </div>
+          <div class="modal-body">
+            <form class="form-horizontal">
+              <div class="form-group">
+                <label for="aa" class="col-md-3 control-label">收货人姓名 :</label>
+                <div class="col-md-9">
+                  <input type="text" class="form-control" id="aa" placeholder="收货人姓名">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="col-md-3 control-label">收货地区 :</label>
+                <select id="province"  name="province" onchange="doProvAndCityRelation();">
+                  　　　　　　　　<option id="choosePro"value="-1">所在省份</option>
+                </select>
+                <select id="citys"  name="city" onchange="doCityAndCountyRelation();">
+                  　　　　　　　　<option id='chooseCity' value='-1'>所在城市</option>
+                </select>
+
+                <select id="county"  name="county">
+                  　　　　　　　　<option id='chooseCounty' value='-1'>所在区/县</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="b" class="col-md-3 control-label">详细地址 :</label>
+                <div class="col-md-9">
+                  <input type="password" class="form-control" id="b" placeholder="详细地址">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="d" class="col-md-3 control-label">联系电话 :</label>
+                <div class="col-md-9">
+                  <input type="text" class="form-control" id="d" placeholder="联系电话">
+                </div>
+
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <span class="button gray pull-left" data-dismiss="modal">返回</span>
+            <span class="button orange add pull-right" data-dimdiss="modal">保存</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+			<div class="yf_pagination">
+				<p class="yf_first">首页</p>
+				<div class="tiaozhuan">
+					<p>上一页</p>
+					<p class="onpuss">1</p>
+					<p class="onpuss">2</p>
+					<p class="onpuss">3</p>
+					<p class="onpuss">4</p>
+					<p class="onpuss">5</p>
+					<p class="onpuss">6</p>
+					<p class="onpuss">7</p>
+					<p class="onpuss">8</p>
+					<p class="onpuss">9</p>
+					<p class="onpuss">10</p>
+					<p>下一页</p>
+				</div>
+				<p class="yf_last">尾页</p>
+				<div class="jump_to">
+					共<span>10</span>页，到第<input type="text" />页
+				</div>
+				<button class="btn">确认</button>共20条
+			</div>
+		</section>
+		<div id="footer"></div>
+	</body>
+	
+	<script src="../js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/citySelect.js"></script>
+	<script src="../js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/yf_Integral_mall.js" type="text/javascript" charset="utf-8"></script>
+</html>

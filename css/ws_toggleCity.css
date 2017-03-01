@@ -1,0 +1,90 @@
+section{
+  width: 100%;
+  min-width: 1180px;
+  background: rgb(239,239,239);
+}
+body{
+
+}
+
+.tog_wrapper{
+  width: 1180px;
+  margin: 0 auto;
+}
+body{
+  font-size: 0;
+}
+.tog_wrapper .tog_title{
+  font-size: 16px;
+  font-weight: 200;
+  line-height: 50px;
+}
+
+.tog_content{
+  width: 100%;
+  border: 1px solid rgb(201,201,201);
+  font-size: 16px;
+  background: #fff;
+  margin-bottom: 40px;
+}
+.tog_content > p{
+  line-height: 55px;
+  padding-left: 20px;
+  font-size: 18px;
+  font-weight: 200;
+  color: rgb(83,83,83);
+  border-bottom: 1px solid rgb(201,201,201);
+  margin: 0;
+
+}
+.tog_content > p .orange{
+  color: rgb(229,84,20);
+}
+
+.tog_content .cityList{
+  width: 100%;
+  padding: 60px 30px 0 30px;
+}
+.tog_content .cityList li{
+  margin-bottom: 25px;
+  width: 100%;
+  word-wrap: break-word;
+}
+.tog_content .cityList li:hover{
+  background: rgb(236,236,236);
+}
+.tog_content .cityList li{
+  word-wrap: break-word;
+}
+.tog_content .cityList li span{
+  padding: 0px 6px;
+  font-size: 18px;
+  color: rgb(92,92,92);
+  line-height: 40px;
+
+}
+
+
+.tog_content .cityList li .flag{
+  display: inline-block;
+  width: 54px;
+  height: 45px;
+  border: 1px solid rgb(201,201,201);
+  text-align: center;
+  line-height: 40px;
+  font-size: 20px;
+  font-weight: 500;
+}
+.tog_content .cityList li .cityItem{
+  float: left;
+  width: 92%;
+  padding: 0 10px;
+  white-space: pre-wrap;
+}
+.tog_content .cityList li .cityItem span:hover{
+  color: rgb(229,84,20);
+  cursor: pointer;
+}
+.tog_content .cityList li:hover .flag{
+  background: rgb(34,120,218);
+}

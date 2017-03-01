@@ -1,0 +1,273 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.left_city a{
+	color: black;
+	text-decoration: none;
+}
+header{
+	width: 100%;
+	/*height: 771px;*/
+	background-color: white;
+	border-bottom: 2px solid cornflowerblue;
+	position: relative;
+}
+.login_information{
+	width: 100%;
+	min-width: 1180px;
+	font-size: 12px;
+	padding-top: 10px;
+	background-color: rgb(234,234,234);
+}
+.information{
+	width: 1180px;
+	height: 27px;
+	margin: 0 auto;
+	color: gray;
+}
+.left_city{
+	float: left;
+}
+.right_login{
+	/* width: 395px; */
+
+	float: right;
+	display: flex;
+	justify-content: space-between;
+}
+.right_login a{
+	margin-right: 20px;
+	color: gray;
+	text-decoration: none;
+}
+.right_login p{
+	border-left: 1px solid lightgray;
+	padding-left: 10px;
+}
+.right_login p:hover{
+	color: red;
+}
+.right_login span:hover{
+	color: red;
+}
+.seek_text{
+	width: 1180px;
+	margin: 0 auto;
+	margin-top: 20px;
+	display: flex;
+	justify-content: space-between;
+}
+.Classified_Search{
+	display: flex;
+	flex-direction: column;
+}
+.sort{
+	text-align: center;
+}
+.sort span{
+	width: 50px;
+	height: 25px;
+	padding: 2px;
+	float: left;
+}
+.sort span:first-child{
+	background-color: dodgerblue;
+}
+.input_group{
+	display: flex;
+}
+.input_group input{
+	width: 440px;
+	height: 34px;
+	padding-left: 10px;
+	float: left;
+	border-radius: 0;
+	outline: none;
+	border: 3px solid cornflowerblue;
+}
+.input_group_addon{
+	width: 48px;
+	height: 34px;
+	text-align: center;
+	border-radius: 0;
+	background-color: cornflowerblue;
+}
+.input_group_addon .search{
+	color: white;
+	font-size: 16px;
+	line-height: 34px;
+}
+.pop{
+	overflow: hidden;
+	font-size: 12px;
+	padding-top: 5px;
+}
+.pop span{
+	float: left;
+	margin-right: 10px;
+}
+.pop a{
+	text-decoration: none;
+	color: black;
+}
+.pop p{
+	margin-right: 10px;
+	float: left;
+}
+.pop{
+	display: none;
+}
+.myyihe_buyCar{
+	margin-top: 25px;
+}
+.myyihe_buyCar a{
+	color: black;
+}
+.myyihe_buyCar a button{
+	width: 120px;
+	height: 35px;
+	margin-left: 10px;
+	padding: 5px;
+}
+.user,.shopping_car{
+	color: darkorange;
+}
+.nav{
+	width: 1180px;
+	height: 45px;
+	margin: 0 auto;
+	margin-top: 15px;
+	font-size: 16px;
+	position: relative;
+
+}
+.group{
+	height: 45px;
+	float: left;
+}
+.dropdown_toggle{
+	width: 175px;
+	height: 100%;
+	border-radius: 0;
+	padding: 0 20px;
+	color: white;
+	background-color: cornflowerblue;
+	margin-right: 100px;
+	line-height: 45px;
+	text-align: center;
+}
+.caret1{
+	margin-left: 10px;
+}
+.dropdown_toggle:hover{
+	background-color: cornflowerblue;
+	color: white;
+}
+.Online_Service{
+	height: 45px;
+	float: right;
+	/*position: relative;*/
+}
+.Service{
+	border: none;
+	line-height: 45px;
+	font-size: 16px;
+}
+.Service:hover{
+	background-color: white;
+	color: red;
+}
+.nav_sorts{
+	width: 610px;
+	line-height: 45px;
+	display: flex;
+	justify-content: space-between;
+}
+.hangye{
+	width: 175px;
+	background-color: black;
+	opacity: 0.8;
+	position: absolute;
+	z-index: 3;
+	list-style: none;
+	display: none;
+}
+.hangye>li>a{
+	padding: 20px;
+	color: white;
+	display: flex;
+	text-decoration: none;
+	justify-content: space-between;
+	border-bottom: 1px solid white;
+}
+.hangye>li>a:hover{
+	background-color: orange;
+	color: white;
+}
+.trade{
+	width: 145px;
+	padding:0 10px;
+	position: absolute;
+	top: 45px;
+	left: -70px;
+	z-index: 5;
+	display: none;
+}
+.trade>li{
+	padding: 5px;
+}
+.trade>li>a{
+	padding: 0;
+	text-decoration: none;
+}
+.right_login a:hover{
+	color: red;
+}
+.nav_sorts a p:hover{
+	color: red;
+}
+.nav .nav_sorts a{
+	color: black;
+	text-decoration: none;
+}
+.yf_text{
+	height: 560px;
+	width: 500px;
+	position: absolute;
+	top: 0;
+	left: 173px;
+	background-color: rgba(0,0,0,0.8);
+	list-style: none;
+	color: white;
+	display: flex;
+	justify-content: flex-start;
+	flex-wrap: wrap-reverse;
+	display: none;
+}
+.yf_text1{
+	padding: 30px;
+}
+.yf_text .yf_text1 a{
+	text-decoration: none;
+	color: white;
+}
+.yf_text1 a span{
+	border-right: 2px solid white;
+	font-size: 14px;
+	margin: 10px;
+	line-height: 50px;
+	padding-right: 10px;
+}
+.text{
+	display: block;
+}
+.{
+	font-size: 20px;
+}
+.dropdown_toggle:hover .caret{
+	-webkit-transition:all 1s; 
+	-moz-transition:all 1s; 
+	-o-transition:all 1s; 
+	transform: rotate(180deg);
+}

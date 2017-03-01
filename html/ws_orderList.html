@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>shoppingCart</title>
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/ws_public1.css">
+    <link rel="stylesheet" href="../css/shoppingCart.css">
+    <script src="../js/vue.js" charset="utf-8"></script>
+    <script src="../js/vue-resource.js" charset="utf-8"></script>
+    <link href="http://cdn.bootcss.com/sweetalert/1.1.3/sweetalert.min.css" rel="stylesheet">
+    <!--<link rel="stylesheet" href="../css/font-awesome.min.css">-->
+    	<link rel="stylesheet" href="../css/ws_selectCity.css" />
+  </head>
+  <body>
+
+    <header>
+      <div class="nav-top-wrapper">
+        <div class="nav-top-inner">
+          <div class="left_city pull-left">
+						<span>所在城市:</span>
+            <a href="ws_toggleCity.html">
+              <span id="ws_city">北京</span>
+  						<img src="../img/home_page/down.png"/>
+            </a>
+					</div>
+          <ul class="list-unstyled list-inline  pull-right">
+            <li>你好: <a id="personal" href="rj_personal.html"></a></li>
+            <li><a href="ws_logIn.html">退出</a></li>
+            <li>|</li>
+            <li><a href="rj_myunpaid.html">我的订单</a></li>
+            <li>|</li>
+            <li><a href="rj_personal.html">我的消息</a></li>
+            <li>|</li>
+            <li><a href="ws_sellerLogIn.html">我是商家</a></li>
+            <li>|</li>
+            <li>400-100-0907</li>
+          </ul>
+        </div>
+
+      </div>
+
+
+    </header>
+
+     <section>
+       <div class="shoppingCart">
+         <div class="cart_header clearfix">
+           <div class="pull-left">
+             <a href="yf_index.html">
+               <img src="../img/y-Life.png" alt="">
+             </a>
+           </div>
+           <div class="pull-right">
+             <div id="crumbs">
+            	<ul class="list-inline">
+            		<li><a href="javascript:;">我的购物车</a></li>
+            		<li><a href="javascript:;" class="active">确认订单信息</a></li>
+            		<li><a href="javascript:;">提交订单成功</a></li>
+
+            	</ul>
+            </div>
+           </div>
+         </div>
+
+
+
+
+
+         <!--orderSure-->
+         <div class="orderSure">
+
+           <div class="addressWrapper">
+             <div class="cart_title clearfix">
+               <span class="cart_name pull-left">收货人信息</span>
+               <span class="pull-right addNewAddress" data-toggle="modal" data-target="#myModal" id="ws_addNewAddress">使用新地址</span>
+             </div>
+             <!-- 添加收货地址的模态框 操作 -->
+             <div class="modal fade bs-example-modal-lg" id="myModal" tabindex="-1" role="dialog" aria-labelledby="d" aria-hidden="true">
+               <div class="modal-dialog">
+                 <div class="modal-content" style="border: 5px solid rgb(219,219,219);border-radius: 0">
+                   <div class="modal-header">
+                     <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                     <h4 class="modal-title" id="d" class="titleAlert">添加地址</h4>
+                   </div>
+                   <div class="modal-body">
+                     <form class="form-horizontal">
+                       <div class="form-group">
+                         <label for="aa" class="col-md-3 control-label">收货人姓名 :</label>
+                         <div class="col-md-9">
+                           <input type="text" class="form-control" id="aa" placeholder="收货人姓名" v-model='addNewAddress.userName'>
+                         </div>
+                       </div>
+
+                       <div class="form-group form-horizontal">
+                         <label class="col-md-3 control-label">收货地区 :</label>
+                         <input type="text" class="addA" name="" placeholder="请输入省份" v-model='addNewAddress.province'>
+                         <input type="text" class="addA" name="" placeholder="请输入市" v-model='addNewAddress.city'>
+                         <input type="text" class="addA" name="" placeholder="请输入县/区" v-model='addNewAddress.country'>
+
+                       </div>
+                       <div class="form-group">
+                         <label for="bbb" class="col-md-3 control-label">详细地址 :</label>
+                         <div class="col-md-9">
+                           <input type="text" class="form-control" id="bbb" placeholder="详细地址" v-model='addNewAddress.streetName'>
+                         </div>
+                       </div>
+                       <div class="form-group">
+                         <label for="ddd" class="col-md-3 control-label">联系电话 :</label>
+                         <div class="col-md-9">
+                           <input type="text" class="form-control" id="ddd" placeholder="联系电话" v-model='addNewAddress.tel'>
+                         </div>
+
+                       </div>
+                       <div class="form-group">
+                         <div class="col-md-offset-3 col-md-10">
+                           <div class="checkbox">
+                             <label>
+                               <input type="checkbox" v-bind:checked="addNewAddress.isDefault == 'false' ? false:true" v-on:click="addNewIsDefault()"> 设置为默认地址
+                             </label>
+                           </div>
+                         </div>
+                       </div>
+                     </form>
+                   </div>
+                   <div class="modal-footer">
+                     <span class="button gray pull-left" data-dismiss="modal">返回</span>
+                     <span class="button orange add pull-right" data-dismiss="modal" v-on:click='addNewAddressFun()'>添加地址</span>
+                   </div>
+                 </div>
+               </div>
+             </div>
+
+             <div class="addressList">
+               <div class="allAddressWrap" v-if='showAddress'>
+                 <ul class="list-unstyled allAddre">
+                   <li class="active" v-for='(item,index) in filterAddress' v-bind:class="{'check' : index == currentIndex}" v-on:click="changeBg(index)" v-bind:time='item.time'>
+                     <div class="radio">
+                       <label class="addInfoArea">
+                         <input type="radio" name="address" v-bind:checked="item.checked">
+                         <span class="name" v-cloak>{{item.userName}}</span>
+                         <span class="province" v-cloak>{{item.province}}</span>
+                         <span class="city" v-cloak>{{item.city}}</span>
+                         <span class="country" v-cloak>{{item.country}}</span>
+                         <span class="area" v-cloak>{{item.streetName}} </span>
+                         <span class="phone" v-cloak>{{item.tel}}</span>
+                         <span class="defaultInfo" v-if="item.isDefault == 'true' ? true:false" >默认地址</span>
+                       </label>
+
+
+                       <span class="pull-right del" data-toggle="modal" v-bind:data-target="delOneaddFlag"
+                       v-on:click='delOneAddConform(index,item)'
+                        >删除</span>
+                       <span class="pull-right revise"  data-toggle="modal" data-target="#updateAddModel" v-on:click='updateAddressComfirm(item,index)'>修改</span>
+                       <span class="pull-right setDefaultAddress" v-if="item.isDefault == 'true' ? false:true" v-on:click="setDefault(item,index)">设置为默认地址</span>
+                     </div>
+                   </li>
+
+                 </ul>
+
+
+
+                 <!-- 点击修改模态框操作 -->
+                 <div class="modal fade bs-example-modal-lg" id="updateAddModel" tabindex="-1" role="dialog" aria-labelledby="cm" aria-hidden="true">
+                   <div class="modal-dialog">
+                     <div class="modal-content" style="border: 5px solid rgb(219,219,219);border-radius: 0">
+                       <div class="modal-header">
+                         <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                         <h4 class="modal-title" id="cm" class="titleAlert">修改地址</h4>
+                       </div>
+                       <div class="modal-body">
+                         <form class="form-horizontal">
+                           <div class="form-group">
+                             <label for="aaname" class="col-md-3 control-label">收货人姓名 :</label>
+                             <div class="col-md-9">
+                               <input type="text" class="form-control" id="aaname" placeholder="收货人姓名" v-bind:value='updateItem.userName' v-model='updateLate.userName'>
+                             </div>
+                           </div>
+
+                           <div class="form-group">
+                             <label class="col-md-3 control-label">收货地区 :</label>
+                             <input type="text" class="addA" name="" placeholder="请输入省份" v-model='updateItem.province'>
+                             <input type="text" class="addA" name="" placeholder="请输入市" v-model='updateItem.city'>
+                             <input type="text" class="addA" name="" placeholder="请输入县/区" v-model='updateItem.country'>
+
+                           </div>
+                           <div class="form-group">
+                             <label for="bbb" class="col-md-3 control-label">详细地址 :</label>
+                             <div class="col-md-9">
+                               <input type="text" class="form-control" id="bbb" placeholder="详细地址" v-bind:value='updateItem.streetName' v-model='updateLate.streetName'>
+                             </div>
+                           </div>
+                           <div class="form-group">
+                             <label for="ddd" class="col-md-3 control-label">联系电话 :</label>
+                             <div class="col-md-9">
+                               <input type="text" class="form-control" id="ddd" placeholder="联系电话" v-bind:value='updateItem.tel' v-model='updateLate.tel'>
+                             </div>
+
+                           </div>
+                           <div class="form-group">
+                             <div class="col-md-offset-3 col-md-10">
+                               <div class="checkbox">
+                                 <label>
+                                   <input type="checkbox" v-bind:checked="updateItem.isDefault == 'false' ? false:true" v-on:click='changeAddress()'> 设置为默认地址
+                                 </label>
+                               </div>
+                             </div>
+                           </div>
+                         </form>
+                       </div>
+                       <div class="modal-footer">
+                         <span class="button gray pull-left" data-dismiss="modal" v-on:click='cancelUpdateAdd()'>返回</span>
+                         <span class="button orange add pull-right" data-dismiss="modal" v-on:click='updateAddress()'>保存 </span>
+                       </div>
+                     </div>
+                   </div>
+                 </div>
+
+                 <!-- 单选删除地址的模态框 -->
+                 <div class="modal fade bs-example-modal-lg" id="delOneAddress" tabindex="-1" role="dialog" aria-labelledby="a" aria-hidden="true">
+                   <div class="modal-dialog">
+                     <div class="modal-content" style="border: 5px solid rgb(219,219,219);border-radius: 0">
+                       <div class="modal-header">
+                         <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                         <h4 class="modal-title text-center" id="a" class="titleAlert">确认删除</h4>
+                       </div>
+                       <div class="modal-footer">
+                         <span class="button gray pull-left" data-dismiss="modal">返回</span>
+                         <span class="button orange add pull-right" data-dismiss="modal" v-on:click='delAddressItem()'>删除</span>
+                       </div>
+                     </div>
+                   </div>
+                 </div>
+                 <p class="addressWarnInfo">
+                   <span class="addressUp" v-on:click="hideMoreAddress()">收起地址 <span class="glyphicon glyphicon-hand-up"></span></span>
+                   <span class="addressDown" v-on:click="showMoreAddress()">展开其他地址 <span class="glyphicon glyphicon-hand-down"></span></span>
+                 </p>
+               </div>
+
+               <div class="addressDefault" v-else>
+                 <span class="glyphicon glyphicon-pencil"></span>
+                 地址为空, <a  class="addNewAddressTwo" data-toggle="modal" data-target="#myModal">点击添加</a>
+               </div>
+
+
+             </div>
+           </div>
+
+
+           <div class="cart_title">
+             <span class="cart_name">商品信息</span>
+           </div>
+           <div class="shopWrap">
+
+           </div>
+           <div class="orderList">
+             <table class="table">
+               <thead>
+               <tr class="active">
+                 <th>
+                   <div class="checkbox">
+                     <label>
+                       海澜之家旗舰店
+                     </label>
+                   </div>
+                 </th>
+                 <th>规格</th>
+                 <th>单价</th>
+                 <th>数量</th>
+                 <th>金额</th>
+               </tr>
+               </thead>
+               <tbody>
+                 <!-- <tr>
+                   <td>
+                     <div class="checkbox">
+                       <label>
+                         <img src="../img/public/shopping.png" alt="">
+                         &lt;&lt;寻龙诀&gt;&gt; 万达青花瓷广场
+                       </label>
+                     </div>
+                   </td>
+                   <td>
+                     <p>版本:国航32G</p>
+                     <p>颜色:黑色</p>
+                   </td>
+                   <td>
+                     ¥ 35
+                   </td>
+                   <td>
+                     <div class="orderNumWrap">
+                       <span class="orderNumber">5</span>
+                     </div>
+
+                   </td>
+                   <td>
+                     ¥ 35
+                   </td>
+
+                 </tr> -->
+
+
+
+               </tbody>
+               <tfoot>
+               <tr>
+                 <td colspan="6" class="text-right">
+
+                   <p><span>运费</span> <span>商品金额</span> <span>店铺合计</span></p>
+                   <p class="orange"><span>5</span> <span id="shopPrice"></span> <span class="allMoney"></span></p>
+                   <span class="btn btn-warning pull-right arriveShop">到店消费</span>
+                   <span class="btn btn-primary pull-right sellerSend">商家配送</span>
+                 </td>
+               </tr>
+
+               </tfoot>
+
+
+             </table>
+
+
+
+             <div class="cart_title">
+               <span class="cart_name">开票信息</span>
+             </div>
+             <div class="radio">
+               <label>
+                 <input type="radio" name="invoiceInfo">不需要
+               </label>
+               <label>
+                 <input type="radio" name="invoiceInfo">个人
+               </label>
+               <label>
+                 <input type="radio" name="invoiceInfo">单位
+               </label>
+             </div>
+             <form class="form-inline invoice">
+               <div class="form-group">
+                 <label for="a">发票抬头:</label>
+                 <input type="text" class="form-control" id="a">
+                 <label>*请填写后认真核对发票信息</label>
+               </div>
+             </form>
+             <div class="cart_title">
+               <span class="cart_name">添加订单备注</span>
+             </div>
+             <input type="text" class="form-control" placeholder="限45个字,请填写有关商品/支付发票等信息">
+
+
+
+
+           </div>
+
+
+           <div class="calcSum border_bottom">
+             <p>总计 : <span class="sumNum ws_sumMoney1" ></span></p>
+             <p>使用积分抵扣 ( 你有1254积分 ) <input type="text" value="1000"> <span class="reduceNum">-10</span></p>
+           </div>
+           <div class="calcSum">
+             <p>应付金额 : <span class="sumNum ws_sumMoney1"></span></p>
+             <p>订单完成后可获得积分:  <span class="reduceNum">30.9</span></p>
+             <p>
+               <a>
+                 <span class="submitOrder">提交订单</span>
+               </a>
+
+             </p>
+           </div>
+         </div>
+
+
+
+
+
+     </section>
+
+
+
+
+     <iframe src="rj_public_bottom.html" frameborder="0" scrolling="no" width="100%" height="477px"></iframe>
+
+
+
+
+
+
+
+     <script src="../js/jquery.min.js" charset="utf-8"></script>
+     <script src="http://cdn.bootcss.com/jquery-migrate/1.4.1/jquery-migrate.min.js"></script>
+     <script src="../js/city.min.js"></script>
+     <script src="../js/ws_address.js" charset="utf-8"></script>
+    <script src="../js/jquery.cityselect.js"></script>
+ <!--    <script src="../js/citySelect.js"></script>-->
+
+     <script src="../js/bootstrap.min.js"></script>
+     <script src="http://cdn.bootcss.com/sweetalert/1.1.3/sweetalert.min.js"></script>
+
+
+  </body>
+</html>

@@ -1,0 +1,169 @@
+body{
+	background-color: rgb(234,234,234);
+}
+section{
+	width: 1180px;
+	margin: 0 auto;
+	margin-top: 20px;
+	background-color: white;
+}
+.join_yihe_way{
+	width: 100%;
+	text-align: center;
+	background-color: dodgerblue;
+	padding: 20px 50px;
+}
+section 	.join_yihe_way a{
+	text-decoration: none;
+	color: white;
+	font-size: 30px;
+}
+.business_title{
+	overflow: hidden;
+}
+.left_business_yihe{
+	float: left;
+	margin-top: 20px;
+}
+.appraise{
+	float: right;
+}
+.orangered_text{
+	font-size: 40px;
+	color: orangered;
+}
+.blue_text{
+	font-size: 40px;
+	color: dodgerblue;
+}
+.black_text{
+	font-size: 20px;
+	margin-left: 10px;
+}
+.appraise{
+	margin-top: 30px;
+}
+.appraise span{
+	padding: 10px 30px;
+	border: 1px solid gainsboro;
+	border-radius: 5px;
+	margin-left: 10px;
+}
+.business_content{
+	/*border: 1px solid gainsboro;*/
+	border-top: 3px solid dodgerblue;
+	position: relative;
+}
+.nav_title{
+	width: 200px;
+	list-style: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	border: 1px solid gainsboro;
+}
+.nav_title div{
+	width: 100%;
+	border-bottom: 1px solid gainsboro;
+	padding:10px 20px;
+}
+.nav_title div a{
+	text-decoration: none;
+	font-size: 20px;
+	color: gray;
+	display: flex;
+	justify-content: space-between;
+}
+.nav_title div .sorts_text{
+	list-style: none;
+	padding: 20px;
+	background-color: white;
+	border: 1px solid gainsboro;
+	width: 500px;
+	height: 500px;
+	position: absolute;
+	top: 0;
+	left: 199px;
+	z-index: 10;
+	display: none;
+}
+.sorts_text li{
+	display: flex;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+}
+.sorts_text li a{
+	padding: 0 20px;
+	margin-bottom: 30px;
+	text-decoration: none;
+	font-size: 14px;
+	border-right: 1px solid gainsboro;
+}
+.business_sorts{
+	width: 950px;
+	border: 1px solid gainsboro;
+	padding:5px;
+	margin-left: 230px;
+}
+.shop_list1{
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+.business_sorts .shop_list1 .car_sort a{
+	text-decoration: none;
+	color: black;
+}
+.car_sort{
+	margin: 5px;
+}
+.sorts_img{
+	width: 220px;
+	position: relative;
+}
+.sorts_img img{
+	width: 100%;
+}
+.zhongxin{
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	text-align: center;
+	width: 100%;
+	height: 30px;
+	color: white;
+	line-height: 30px;
+	background-color: rgba(0,0,0,0.8);
+	display: none;
+}
+.yf_phone{
+	width: 220px;
+	/*margin-top: 10px;*/
+	line-height: 20px;
+	padding: 10px;
+	position: relative;
+}
+.mask{
+	width: 220px;
+	height: 110px;
+	background-color: rgba(0,0,0,0.3);
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	display: none;
+}
+.car_sort:hover .mask{
+	display: block;
+}
+.car_sort:hover .zhongxin{
+	display: block;
+}
+.glyphicon{
+	color: orangered;
+	margin-right: 10px;
+}
+#footer{
+	margin-top: 20px;
+}

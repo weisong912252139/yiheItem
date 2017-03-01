@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>注册页面</title>
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/ws_public1.css">
+    <link rel="stylesheet" href="../css/ws_public2.css">
+    <link rel="stylesheet" href="../css/ws_register.css">
+    <link href="http://cdn.bootcss.com/sweetalert/1.1.3/sweetalert.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <div class="nav-top-wrapper">
+        <div class="nav-top-inner">
+          <div class="left_city pull-left">
+						<span>所在城市:</span>
+            <a href="ws_toggleCity.html">
+              <span>北京</span>
+  						<img src="../img/home_page/down.png"/>
+            </a>
+					</div>
+          <ul class="list-unstyled list-inline  pull-right">
+            <li><a href="yf_index.html">欢迎光临易和生活港</a></li>
+            <li>|</li>
+            <li><a href="ws_sellerLogin.html">我是商家</a></li>
+            <li>|</li>
+            <li>400-100-0907</li>
+          </ul>
+        </div>
+
+      </div>
+      <div class="nav-middle">
+        <div class="pull-left">
+          <a href="yf_index.html">
+            <img src="../img/y-Life.png" alt="">
+          </a>
+
+        </div>
+        <span class="colLine"></span>
+        <div class="pull-left">
+          <span class="title">会员注册</span>
+        </div>
+
+
+      </div>
+
+    </header>
+
+    <section>
+      <div class="log_wrap">
+        <div class="log_form">
+
+          <div class="log_ipt reg_phone">
+            <input type="text" placeholder="请输入手机号">
+            <p class="warningInfo">
+              手机号有误,请确认后再输
+            </p>
+          </div>
+          <div class="log_ipt reg_pass">
+            <input type="password" placeholder="请输入密码(6-20位号码字符)">
+            <p class="warningInfo">
+              请输入(6-20) 位字符,必须包含字母和数字
+            </p>
+          </div>
+          <div class="log_ipt reg_repass">
+            <input type="password" placeholder="再次输入密码确认">
+            <p class="warningInfo">
+              两次密码输入不一致,请确认后再输入
+            </p>
+          </div>
+          <div class="log_checkNum">
+            <input type="text" placeholder="验证码">
+            <span class="checkNum">abcd</span>
+            <span class="changeNum">看不清换一张</span>
+            <p class="warningInfo">
+              验证码输入有误,请重新输入
+            </p>
+          </div>
+          <div class="log_phoneCheckNum">
+
+            <input type="text" placeholder="手机验证码">
+            <span class="getCheck">
+              获取验证码
+            </span>
+            <span class="layerShielding"></span>
+            <p class="warningInfo">
+
+              手机验证码输入有误,请重新输入
+            </p>
+          </div>
+
+          <div class="log_btn">
+            <a href="ws_login.html" class="red">登录</a>
+            <a href="javascript:;" class="blue" id="register">会员注册</a>
+          </div>
+
+
+
+
+
+
+        </div>
+      </div>
+    </section>
+    <iframe src="rj_public_bottom.html" frameborder="0" scrolling="no" width="100%" height="477px"></iframe>
+    <script src="../js/jquery.min.js"></script>
+    <script src="http://cdn.bootcss.com/sweetalert/1.1.3/sweetalert.min.js"></script>
+    <script src="../js/ws_register.js" charset="utf-8"></script>
+
+
+  </body>
+</html>

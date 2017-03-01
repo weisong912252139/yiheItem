@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>userGuide</title>
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/ws_public1.css">
+    <link rel="stylesheet" href="../css/ws_useGuide.css">
+    <script src="../js/vue.js"></script>
+  </head>
+  <body>
+
+
+  <header>
+    <div class="nav-top-wrapper">
+      <div class="nav-top-inner">
+        <ul class="list-unstyled list-inline  pull-right">
+          <li><a href="yf_index.html">欢迎光临易和生活港</a></li>
+          <li>|</li>
+          <li><a href="ws_sellerLogIn.html">我是商家</a></li>
+          <li>|</li>
+          <li>400-100-0907</li>
+        </ul>
+      </div>
+
+    </div>
+    <div class="nav-middle">
+      <div class="pull-left">
+        <a href="yf_index.html">
+          <img src="../img/y-Life.png" alt="">
+        </a>
+      </div>
+      <span class="colLine"></span>
+      <div class="pull-right">
+        <ul class="list-unstyled list-inline">
+          <li><a href="ws_login.html">登录</a></li>
+          <li>|</li>
+          <li><a href="ws_register.html">注册</a></li>
+        </ul>
+      </div>
+
+
+    </div>
+
+  </header>
+
+  <section>
+    <div class="content-wrapper">
+      <div class="content-inner">
+        <div class="content">
+          <div class="content-top clearfix">
+            <div class="pull-left selectPart">
+              <input type="text" id="ipt">
+              <span id="currentCity">城市</span>
+            </div>
+            <a href="yf_index.html" class="pull-right">进入易和</a>
+          </div>
+          <div class="content-bottom" id="a">
+            <p>
+              热门城市 <span>哈尔滨</span> <span>烟台</span>
+            </p>
+            <ul class="cityList">
+              <li v-for="item in cityArr">
+                <span class="flag" v-text="item.flag"></span>
+                <ul class="listItem list-inline pull-left">
+                  <li v-for="a in item.cityItem" v-text="a" v-on:click="selectCity(a)"></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <div class="bottom-wrapper">
+      <div class="bottom-inner">
+        <p class="text-center">
+          版权所有 2016益和生活港 保留所有版权| 沪ICP备2440
+        </p>
+        <p class="text-center bottom">
+          易和生活 纵享品质
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/jquery.min.js" charset="utf-8"></script>
+
+  <script src="../js/ws_useGuide.js" charset="utf-8"></script>
+
+
+  </body>
+</html>

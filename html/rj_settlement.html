@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>易和生活港 | 申请入驻</title>
+		<link rel="stylesheet" type="text/css" href="../css/bootstrap.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/rj_settlement.css"/>
+	</head>
+	<body>
+<div id="header"></div>
+
+		<div class="security">
+			<div class="place">
+				<p>您当前的位置：加入易和 > <span>申请入驻</span></p>
+			</div>
+			<div class="place-font">
+				<div id="crumbs">
+						<ul class="list-inline">
+							<li><a href="javascript:;" class="active">1.提交资料</a></li>
+							<li><a href="javascript:;">2.等待审核</a></li>
+							<li><a href="javascript:;">3.入驻易和</a></li>
+
+						</ul>
+						<p>填写基本信息（带*为必填，请如实填写）</p>
+					</div>
+					<div class="settle">
+						<ul>
+							<li><span>*</span>商家地址: <input type="text" class="inputs"/></li>
+							<li><span>*</span>商户名称: <input type="text" class="inputs" /></li>
+							<li><span>*</span>商户类型: <input type="radio"  name="xiao"/>  企业商户<input type="radio"  name="xiao"  class="inputs1"/>  个体商户</li>
+					<li><span>*</span>联系人: <input type="text" class="inputs inputs2" /></li>
+						<li><span>*</span>联系电话: <input type="text" class="inputs" /></li>
+
+						<li><span>*</span><span class="spans">备注:</span> <textarea name="" class="inputs3"></textarea></li>
+						<li><span>*</span>图片信息:
+							<ul class="rj_file">
+								<li>1.商家门脸照</li>
+								<li>
+									<div class="face">
+										<img src="../img/public/rjbn.png"/>
+										<p>点击上传门脸照</p>
+										<input type="file" accept="image/png,image/jpg"/>
+									</div>
+									<div class="face">
+										<img src="../img/public/rjbn.png"/>
+										<p>点击上传门脸照</p>
+										<input type="file" accept="image/png,image/jpg"/>
+									</div>
+									<div class="face">
+										<img src="../img/public/rjbn.png"/>
+										<p>点击上传门脸照</p>
+										<input type="file" accept="image/png,image/jpg"/>
+										<!--accept选择文件类型-->
+									</div>
+
+								</li>
+
+								<li>2.商家环境照</li>
+								<li>
+									<div class="face">
+										<img src="../img/public/rjbn.png"/>
+										<p>点击上传环境照</p>
+										<input type="file" accept="image/png,image/jpg"/>
+									</div>
+									<div class="face">
+										<img src="../img/public/rjbn.png"/>
+										<p>点击上传环境照</p>
+										<input type="file" accept="image/png,image/jpg"/>
+									</div>
+									<div class="face">
+										<img src="../img/public/rjbn.png"/>
+										<p>点击上传环境照</p>
+										<input type="file" accept="image/png,image/jpg"/>
+										<!--accept选择文件类型-->
+									</div>
+
+								</li>
+								<li>3.资质证件照</li>
+								<li>
+									<div class="face">
+										<img src="../img/public/rjbn.png"/>
+										<p>点击上传证件照</p>
+										<input type="file" accept="image/png,image/jpg"/>
+									</div>
+									<div class="face">
+										<img src="../img/public/rjbn.png"/>
+										<p>点击上传证件照</p>
+										<input type="file" accept="image/png,image/jpg"/>
+									</div>
+									<div class="face">
+										<img src="../img/public/rjbn.png"/>
+										<p>点击上传证件照</p>
+										<input type="file" accept="image/png,image/jpg"/>
+										<!--accept选择文件类型-->
+									</div>
+
+								</li>
+							</ul>
+
+
+
+
+
+
+						</li>
+
+						</ul>
+
+
+					</div>
+	<button type="button" class="btn btn-warning  colors">提交申请</button>
+
+
+			</div>
+		</div>
+
+		<!--<iframe src="rj_public_bottom.html" width="100%" height="477px" frameborder='0' scrolling="no"></iframe>-->
+
+		<div id="footer"></div>
+
+	</body>
+	<script src="../js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/submitImg.js" charset="utf-8"></script>
+<script type="text/javascript">
+	$(document).ready(function (){
+		$('#header').load('yf_header_encapsulation.html')
+		$('#footer').load('rj_public_bottom.html');
+		$('.rj_file li input').change(function() {
+			var urlImg = getImgURL(this);
+			console.log(urlImg);
+			$(this).parent().find('img').attr('src',urlImg).width('100px').height('100px');
+		})
+	})
+</script>
+</html>

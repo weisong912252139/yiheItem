@@ -1,0 +1,149 @@
+/*.bottom {
+	margin-top: 456px;
+}*/
+
+body{
+	width: 100%;
+	min-width: 1180px;
+}
+
+
+.rj_bottom .message-out {
+	width: 100%;
+	background-color: #e2e2e2;
+}
+
+.rj_bottom .message-head {
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	width: 1170px;
+	height: 85px;
+	text-align: center;
+	background-color: #e2e2e2;
+}
+
+.rj_bottom .detailed {
+	line-height: 65px;
+}
+
+.rj_bottom .detailed>p,.detailed a>p {
+	display: inline-block;
+	font-size: 24px;
+	margin-left: 10px;
+	margin-top: 10px;
+	vertical-align: middle;
+	color: #666666;
+}
+.rj_bottom .detailed a:hover{
+	text-decoration: none;
+}
+
+.rj_bottom .detailed>p,.detailed>img{
+	cursor: pointer;
+}
+
+
+.rj_bottom .life {
+	width: 100%;
+	padding-bottom: 20px;
+	border-bottom: 2px solid #d3d3d3;
+}
+
+.rj_bottom .life-out {
+	width: 1170px;
+	height: 200px;
+	margin: 0 auto;
+	margin-top: 30px;
+	overflow: hidden;
+}
+
+.rj_bottom .left {
+	width: 645px;
+	display: flex;
+	float: left;
+}
+
+.rj_bottom .left-life {
+	padding-right: 80px;
+}
+
+.rj_bottom .code-left,
+.rj_bottom .code-right {
+	text-align: center;
+	padding-right: 30px;
+}
+
+.rj_bottom .code-left>p,
+.rj_bottom .code-right>p {
+	display: inline-block;
+	margin-top: 10px;
+	margin-left: 5px;
+}
+
+.rj_bottom .code-right>i,.code-left>i{
+	font-size: 30px;
+	color: #ff6c00;
+
+	vertical-align: middle;
+}
+
+
+
+.rj_bottom .right-body {
+	width: 525px;
+	float: left;
+}
+
+.rj_bottom .right {
+	display: flex;
+	justify-content: space-between;
+	padding-left: 35px;
+	border-left: 2px solid #d3d3d3;
+	height: 145px;
+}
+
+.rj_bottom .footer>h6 {
+	font-size: 20px;
+	color: #666666;
+	cursor: pointer;
+}
+
+.rj_bottom .footer>p {
+	font-size: 16px;
+	line-height: 26px;
+	color: #666666;
+}
+
+.rj_bottom .footer p a {
+	color: #666666;
+}
+
+.rj_bottom .footer>p:hover {
+	color: #008de1;
+	cursor: pointer;
+}
+
+.rj_bottom .footer p a:hover {
+	color: #008de1;
+	text-decoration: none;
+}
+
+.rj_bottom .reserved {
+	margin: 0 auto;
+	
+	text-align: center;
+	margin-top: 40px;
+	color: #999999;
+	padding-bottom: 40px;
+}
+
+.rj_bottom .reserved>p:nth-child(2) {
+	color: #008de1;
+}
+
+.rj_bottom .reserved p span {
+	margin-left: 10px;
+	padding-left: 10px;
+	border-left: 2px solid #999999;
+}

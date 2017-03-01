@@ -1,0 +1,174 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	font-size: 0;
+}
+ul li{
+	list-style: none;
+}
+section {
+	width: 100%;
+	min-width: 1180px;
+	font-size: 16px;
+	z-index: -1;
+	text-align: center;
+}
+
+.sorts{
+	width: 1180px;
+	margin: 0 auto;
+	margin-top: 10px;
+	display: flex;
+	justify-content: space-between;
+}
+.Brand_selection{
+	width: 1180px;
+	margin: 0 auto;
+	margin-top: 20px;
+}
+.brand{
+	padding-left: 5px;
+	text-align: left;
+}
+.selection{
+	width: 1180px;
+	height: 370px;
+	padding: 10px;
+	overflow: hidden;
+	border: 1px solid lightgray;
+	border-top: 3px solid dodgerblue;
+}
+.left_meinv{
+	float: left;
+}
+.right_sorts{
+	width: 835px;
+	float: right;
+	display: flex;
+	justify-content: flex-start;
+	flex-flow:row wrap;
+}
+.right_sorts img{
+	border: 1px solid lightgray;
+	width: 208px;
+	height: 116px;
+}
+.car_ornament{
+	width: 1180px;
+	margin: 0 auto;
+	margin-top: 20px;
+	position: relative;
+}
+.yf_arrows{
+	width: 104px;
+	position: absolute;
+	top:  21px;
+	left: 335px;
+}
+.head1{
+	display: flex;
+}
+.commend1,.commend2,.commend3,.commend4{
+	display: flex;
+	position: absolute;
+	left: 340px;
+}
+.commend1 li,.commend2 li,.commend3 li,.commend4 li{
+	padding: 0 20px;
+}
+.cars{
+	padding: 10px;
+	border: 1px solid lightgray;
+	border-top: 3px solid dodgerblue;
+	overflow: hidden;
+}
+.big_car{
+	float: left;
+	margin-right: 5px;
+}
+.car_sorts{
+	height: 510px;
+	display: flex;
+	justify-content: space-between;
+	align-self:auto | flex-start | flex-end ;
+	flex-wrap: wrap;
+	
+}
+.shop_list{
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	background-color: white;
+}
+.shop_list .car_sort a{
+	text-decoration: none;
+	color: black;
+}
+.car_sort{
+	width: 270px;
+	height: 250px;
+	position: relative;
+}
+.sorts_img{
+	width: 270px;
+	height: 150px;
+	position: relative;
+}
+.zhongxin p{
+	color: white;
+}
+.zhongxin{
+	width: 270px;
+	height: 40px;
+	line-height: 40px;
+	display: none;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	background-color: black;
+	opacity: 0.8;
+	text-align: center;
+}
+.yf_phone{
+	padding-top: 10px;
+	position: relative;
+	text-align: left;
+}
+.yf_phone p span.glyphicon{
+	color: orangered;
+}
+.zhezhaoceng{
+	width: 270px;
+	height: 160px;
+	background-color: black;
+	opacity: 0.3;
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: none;
+}
+.comminute{
+	width: 1180px;
+	margin: 20px 0;
+}
+.zhongxin{
+	display: none;
+}
+.car_sort:hover .zhongxin{
+	display: block;
+}
+.car_sort:hover .zhezhaoceng{
+	display: block;
+}
+.isHide1,.isHide2,.isHide3,.isHide4{
+	display: none;
+}
+.true1,.true2,.true3,.true4{
+	display: block;
+}
+
+.nav .nav_sorts .nav_home_page{
+	color: red;
+}

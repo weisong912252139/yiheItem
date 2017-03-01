@@ -1,0 +1,199 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-color: rgb(234, 234, 234);
+}
+
+.shows1 {
+	width: 1142px;
+	height: 400px;
+	margin-top: 10px;
+}
+
+.shop_list1 {
+	height: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	background-color: white;
+	float: left;
+}
+
+.car_sort {
+	width: 272px;
+	height: 100%;
+	border: 1px solid gainsboro;
+	margin-bottom: 20px;
+}
+
+.car_sort:hover {
+	border: 1px solid red;
+}
+
+.sorts_img {
+	width: 270px;
+	height: 270px;
+}
+
+.sorts_img img {
+	width: 100%;
+	height: 100%;
+}
+
+.yf_info2 {
+	padding: 10px;
+	font-size: 16px;
+	line-height: 40px;
+	overflow: hidden;
+	color: black;
+}
+
+.yf_info2 p {
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 2;
+	overflow: hidden;
+}
+
+.current_price {
+	color: red;
+	float: left;
+}
+
+.Original_price {
+	float: right;
+}
+
+.yf_pagination {
+	display: flex;
+	background-color: white;
+	justify-content: space-around;
+	font-size: 16px;
+	margin-bottom: 20px;
+}
+
+.yf_pagination>p {
+	padding: 5px 15px;
+	border: 1px solid gainsboro;
+}
+
+.jump_to {
+	padding-top: 5px;
+}
+
+.jump_to input {
+	width: 50px;
+	text-align: center;
+}
+
+.tiaozhuan {
+	display: flex;
+}
+
+.tiaozhuan>p {
+	padding: 5px 15px;
+	border: 1px solid gainsboro;
+}
+
+.yf_first,
+.yf_last {
+	color: dodgerblue;
+}
+
+.yf_pagination .btn {
+	padding: 0;
+	height: 34px;
+	padding: 5px 25px;
+	background-color: dodgerblue;
+}
+
+/*.yf_pagination {
+	margin-top: 30px;
+}*/
+
+section {
+	width: 1180px;
+	margin: 0 auto;
+}
+
+.yf_way p {
+	margin-top: 20px;
+	font-size: 18px;
+}
+
+.yf_way p a {
+	text-decoration: none;
+	color: gray;
+}
+
+.yf_way p a:last-child {
+	color: orangered;
+}
+
+.yf_communication {
+	background-color: white;
+}
+
+.left_magnifier {
+	margin: 20px;
+}
+
+.shangjia_xinxi {
+	display: flex;
+	background-color: white;
+	margin-bottom: 30px;
+	justify-content: space-between;
+}
+
+.yf_center_xinxi {
+	width: 450px;
+	line-height: 20px;
+}
+.yf_center_xinxi h2{
+	color: dodgerblue;
+	font-size: 25px;
+	margin: 20px 0;
+}
+.yf_info{
+	padding: 20px 0;
+	margin: 10px 0;
+	line-height: 40px;
+	border-bottom: 1px solid gainsboro;
+	border-top: 1px solid gainsboro;
+}
+.yf_info p span{
+	color: orangered;
+}
+.yf_right_pingjia>img{
+	margin-bottom: 50px;
+}
+.yf_right_pingjia p{
+	margin-bottom: 20px;
+}
+.centers{
+	height: 1350px;
+	padding: 10px;
+	background-color: white;
+}
+.centers ul li{
+	border: 1px solid gainsboro;
+	padding: 20px 20px;
+	background-color: rgb(246,246,246);
+}
+.centers ul li a{
+	text-decoration: none;
+	color: rgba(0,0,0,0.7);
+	font-size: 20px;
+}
+.centers ul li.active{
+	background-color: white;
+	border: 0;
+	border-top: 3px solid dodgerblue;
+}
+.yf_nav_tabs{
+	display: flex;
+}
